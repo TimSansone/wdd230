@@ -1,89 +1,120 @@
-header {
-    background-color: #5d53b1;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap');
+
+
+
+body {
+    background-color: #38a3a5;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 22px;
     margin: auto;
-    width: 100%;
+    padding: 0;
+    text-align: center;
+    max-width: 1600px;
+}
+
+:root {
+    --primary-color: #38a3a5;
+    --heading-font: "Raleway", sans-serif;
+    --paragraph-font: "Arial", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+    padding: 15px;
+    background-color: #d4ac0d;
+    color: black;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
 
 }
 
-        header h1{
-            font-size: 2.3rem;
-            font-weight: 600;
-        }
+nav ul {
+    padding: 15px;
+    background-color: #396e94;
+    color: #38a3a5;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2em;
+}
 
-        header h2{
-            font-weight: 500;
-            font-size: 2rem;
-        }
+nav li a {
+    text-decoration: none;
+    color: #38a3a5;
+}
 
-/* --------- Main Content ----------- */
+nav ul li {
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    padding: 2px;
+    border-radius: 3px;
+    background-color: #396e94;
+    transition: 0.5s;
+    color: white;
+}
+
+main h2, h3 {
+    color: #38a3a5;
+    font-family: "Raleway", sans-serif;
+}
+
 main {
+    margin: 40px auto;
+    max-width: 900px;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.card{
-    margin: 1rem;
-    padding: 2rem;
-    background-color: #EBF2FA;
-    border: solid #3c6997da;
-    grid-column: span 1;
-    align-items: center;
-    text-align: center;
-}
-
-.card h2{
-    background-color: #5d53b1;
+.card {
+    border-radius: 10px;
     font-family: "Raleway", sans-serif;
-    color: white;
-    padding: 1rem;
-    margin: -2rem -2rem 1rem;
-    font-weight: 500;
-    font-size: 1.5rem;
-    text-align: center;
+    border: 2px black solid;
 }
 
-.card p{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 1.3rem;
-    text-align: center;
+.card h3 {
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    background-color: #38a3a5;
+    font-family: "Raleway", sans-serif;
+    border-radius: 10px 10px 0 0;
+    color: black;
+}
+
+.card ul li a {
+    color: blue;
+}
+
+#Weather p {
+    color: blue;
+    padding: 15px 0 15px 0;
+}
+
+#weather {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #D4AC0D;
+    text-decoration: none;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
-.card a{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 1.3rem;
+footer p {
+    padding: 15px 0 15px 0;
 }
 
-.card img{
-   
-   width: 100%;
-   height: auto;
-   margin-top: 1rem;
-}
-
-/* Tablet View */
-@media only screen and (min-width: 37.5em){
-    main{
-        grid-template-columns: 1fr 1fr;
-    }
-    .card{
-        grid-column: span 1;
-    }
-    
-}
-
-/* Desktop View */
-@media only screen and (min-width: 60em){
-    main{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .card{
-        grid-column: span 1;
-    }
-}

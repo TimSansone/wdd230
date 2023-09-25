@@ -95,7 +95,7 @@ main {
     color: blue;
 }
 
-.card:hover {
+nav card:hover {
     padding: 2px;
     border-radius: 3px;
     background-color: #396e94;

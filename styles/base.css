@@ -79,7 +79,8 @@ main {
 .card {
     border-radius: 10px;
     font-family: "Raleway", sans-serif;
-    border: 2px black solid;
+    border: 1px black solid;
+    min-width: 15em;
 }
 
 .card h3 {
@@ -93,6 +94,7 @@ main {
 
 .card ul li a {
     color: blue;
+    border-radius: 3px;
 }
 
 .card a:hover {

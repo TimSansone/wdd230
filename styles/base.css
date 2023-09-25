@@ -95,6 +95,14 @@ main {
     color: blue;
 }
 
+.card:hover {
+    padding: 2px;
+    border-radius: 3px;
+    background-color: #396e94;
+    transition: 0.5s;
+    color: white;
+}
+
 #Weather p {
     color: blue;
     padding: 15px 0 15px 0;

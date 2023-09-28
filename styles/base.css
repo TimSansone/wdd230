@@ -234,3 +234,15 @@ nav .card ul {
 		margin: 1rem auto;
 	}
 }
+
+.iframe-container {
+	margin: 0 auto;
+	margin-bottom: 30px;
+	padding: var(--gap);
+	max-width: var(--max-width);
+}
+
+iframe {
+	width: 100% !important;
+	border-radius: var(--radius);
+}

@@ -52,6 +52,7 @@ nav ul {
 nav li a {
     text-decoration: none;
     color: #38a3a5;
+  display: none;
 }
 
 nav ul li {
@@ -194,6 +195,14 @@ nav .card ul {
 	max-width: 580px;
 	height: 100vh;
 	
+}
+
+nav .active::after {
+  content: "😊";
+}
+
+nav .active::before {
+  content: "👍";
 }
 
 /* large view navigation ************************************/

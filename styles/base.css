@@ -11,7 +11,7 @@ body {
     padding: 0;
     text-align: center;
     max-width: 1600px;
-  color: #38a3a5;
+    color: #38a3a5;
 }
 
 :root {
@@ -35,7 +35,7 @@ header {
     gap: 80px;
     align-items: center;
     justify-content: center;
-  color: #38a3a5;
+  color: black;
 
 }
 

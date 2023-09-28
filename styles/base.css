@@ -5,13 +5,13 @@
 
 
 body {
-    background-color: #38a3a5;
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 22px;
     margin: auto;
     padding: 0;
     text-align: center;
     max-width: 1600px;
+  color: #38a3a5;
 }
 
 :root {
@@ -29,12 +29,12 @@ header {
     font-family: "Raleway", sans-serif;
     letter-spacing: 2px;
     padding: 15px;
-    background-color: #d4ac0d;
     color: black;
     display: flex;
     gap: 80px;
     align-items: center;
     justify-content: center;
+  color: #38a3a5;
 
 }
 
@@ -138,24 +138,12 @@ nav .card ul {
     padding: 15px;
 }
 
-/* small view navigation */
-#menu {
-	font-size: 1.5rem;
-	border: 1px solid rgba(0,0,0,.3);
-	padding: 3px 7px 6px;
-	background-color: #eee;
-	color: #000;
- 	position: absolute;
-	top: 0;
-	right: 0;
-}
-
 #menu::before {
-	content: "☰";
+  content: "☰"";
 }
 
 #menu.open::before {
-	content: "❌";
+  content: "❌"
 }
 
 .navigation {
@@ -190,6 +178,9 @@ nav .card ul {
 	display: block;
 }
 
+.active::before {
+	content: "📍 ";
+}
 
 .active {
 	background-color: darkgrey;
@@ -233,16 +224,4 @@ nav .card ul {
 	.stuff {
 		margin: 1rem auto;
 	}
-}
-
-.iframe-container {
-	margin: 0 auto;
-	margin-bottom: 30px;
-	padding: var(--gap);
-	max-width: var(--max-width);
-}
-
-iframe {
-	width: 100% !important;
-	border-radius: var(--radius);
 }

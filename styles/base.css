@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap');
 
-
-
 body {
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 22px;
@@ -35,8 +33,7 @@ header {
     gap: 80px;
     align-items: center;
     justify-content: center;
-  color: black;
-
+    color: black;
 }
 
 nav ul {
@@ -52,7 +49,7 @@ nav ul {
 nav li a {
     text-decoration: none;
     color: #38a3a5;
-  display: none;
+    display: none;
 }
 
 nav ul li {
@@ -86,7 +83,6 @@ main {
     font-family: "Raleway", sans-serif;
     border: 1px black solid;
     min-width: 15em;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -104,6 +100,11 @@ main {
     border-radius: 3px;
 }
 
+.card li {
+    list-style: none;
+    padding: 4px;
+}
+
 .card a:hover {
     padding: 2px;
     border-radius: 3px;
@@ -112,22 +113,15 @@ main {
     color: white;
 }
 
-#Weather p {
-    color: blue;
-    padding: 15px 0 15px 0;
-}
-
-#weather {
-    margin-bottom: 20px;
-}
-
 footer {
+    background-color: lightblue;
     text-decoration: none;
     padding: 25px 50px;
     margin-top: 200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: black;
 }
 
 footer p {
@@ -154,9 +148,12 @@ nav .card ul {
 	background-color: #333;
 	color: #fff;
 }
+
+}
 .navigation li {
 	display: none;
 }
+
 .navigation li a {
 	display: block;
 	padding: 1rem;
@@ -164,6 +161,7 @@ nav .card ul {
 	text-decoration: none;
 	color: #fff;
 }
+
 .navigation li a:hover {
 	background-color: #bbb;
 	color: #333;
@@ -175,8 +173,13 @@ nav .card ul {
 	display: block;
 	width: 100%;
 }
+
 .open li a {
 	display: block;
+}
+
+header h1::first-line {
+  color: blue;
 }
 
 .active::before {
@@ -193,7 +196,6 @@ nav .card ul {
 	background-color: #bed;
 	max-width: 580px;
 	height: 100vh;
-	
 }
 
 nav .active::after {
@@ -211,26 +213,26 @@ nav .active::before {
 		margin-left: 0;
 		text-align: center;
 	}
-	
-	h2 {
+  
+  	h2 {
 		font-size: 2rem;
 		text-align: center;
 	}
 
-	#menu {
+  	#menu {
 		display: none; /* hide hamburger button */
 	}
-
-	.navigation {
+  
+  	.navigation {
 		flex-direction: row;
-	}
-
-	.navigation li {
+	}	
+  
+  .navigation li {
 		display: block;
 		flex: 1 1 100%;
 	}
-	
-	.stuff {
+  
+  	.stuff {
 		margin: 1rem auto;
 	}
 }

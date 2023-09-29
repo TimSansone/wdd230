@@ -12,12 +12,6 @@ body {
     color: #38a3a5;
 }
 
-:root {
-    --primary-color: #38a3a5;
-    --heading-font: "Raleway", sans-serif;
-    --paragraph-font: "Arial", sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -30,10 +24,8 @@ header {
     padding: 15px;
     color: black;
     display: flex;
-    gap: 80px;
     align-items: center;
     justify-content: center;
-    color: black;
 }
 
 nav ul {
@@ -43,7 +35,6 @@ nav ul {
     list-style: none;
     font-family: "Raleway", sans-serif;
     font-size: 1.2em;
-    list-style: none;
 }
 
 nav li a {
@@ -74,7 +65,6 @@ main {
     margin: 40px auto;
     max-width: 900px;
     display: grid;
-    grid-template-columns: 1fr;
 }
 
 .card {
@@ -149,7 +139,6 @@ nav .card ul {
 	color: #fff;
 }
 
-}
 .navigation li {
 	display: none;
 }
@@ -232,7 +221,4 @@ nav .active::before {
 		flex: 1 1 100%;
 	}
   
-  	.stuff {
-		margin: 1rem auto;
-	}
 }

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gabarito&family=Quicksand&family=Raleway&display=swap');
+
+/* Reset some default styles for browsers */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: lightblue;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section ul li {
+    line-height: 1.5;
+    list-style: none;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+#site-purpose {
+  max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+#typography {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+#scenarios {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+typography ul li {
+    line-height: 1.5;
+    list-style: none;
+}
+
+#wireframecard {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Font examples */
+
+/* Define font styles */
+.font-example {
+    margin: 20px;
+    padding: 10px
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.font-example p {
+    font-size: 50px;
+    margin: 0;
+}
+
+/* Apply different fonts to each example */
+#font1 {
+    font-family: "Gabarito", cursive;
+}
+
+#font1 h2 {
+  text-decoration: underline;
+  color: blue;
+}
+
+#font2 {
+    font-family: "Raleway", sans-serif;
+}
+
+#font2 h2 {
+    text-decoration: underline;
+  color: red;
+}
+
+#font3 {
+    font-family: "Helvetica", sans-serif;
+}
+
+#font3 h2 {
+    text-decoration: underline;
+  color: navy;
+}
+
+
+/* Add more CSS rules to style the website as per your requirements */

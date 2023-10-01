@@ -77,6 +77,18 @@ footer {
     font-size: 20px;
 }
 
+#colorschema {
+    max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      justify-content: center;
+      text-align: center;
+      font-size: 20px;
+  }
+  
+
 #typography {
     max-width: 800px;
     margin: 20px auto;

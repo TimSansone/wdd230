@@ -1,0 +1,60 @@
+@media only screen and (min-width: 40em){
+
+    /* nav ul{
+        display: flex;
+        justify-content: space-evenly;
+    } */
+
+    .menu {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .menu li{
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .menu a{
+        text-align: center;
+    }
+
+    #navMenu{
+        display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    main h2 {
+        grid-column: span 3;
+    }
+    #learning-activites {
+        grid-column: span 2;
+    }
+        #learning-activities a{
+            padding: 0.5em;
+        }
+    
+    #information {
+        grid-column: span 1;
+        
+    }
+    .card{
+        width: fit-content;
+    }
+    .card h3 {
+        padding: 1rem;
+    }
+
+    .card p{
+        margin: 0 auto;
+    }
+
+    iframe{
+        grid-column: span 2;
+        margin: 1em auto;
+        min-width: 100%
+    }
+}

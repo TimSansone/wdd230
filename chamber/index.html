@@ -17,6 +17,7 @@
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/hamburger-menu.js"></script>
     <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/darkmode.js"></script>
     <meta property = "og:title" content = "Website for Orlando Florida
     Chanber of Commerce">
     <meta property = "og:type" content = "website">
@@ -105,45 +106,9 @@
 
         </div>
         <br>
+        
     </section>
-        <sectionn>
-            <div class="weather-card">
-                <title>Current Weather Conditions</title>
-                <h2>Weather in Orlando, FL</h2>
-                <div id="weather-icon" class="weather-icon"></div>
-                <h3 id="weather-description"></h3>
-                <p id="temperature"></p>
-                <p id="location"></p>
-            </div>
-        <script>
-            const apiKey = 'YOUR_API_KEY';
-            const lat = 'LATITUDE';
-            const lon = 'LONGITUDE';
-
-            const weatherIcon = document.getElementById('weather-icon');
-            const weatherDescription = document.getElementById('weather-description');
-            const temperature = document.getElementById('temperature');
-            const location = document.getElementById('location');
-
-            async function fetchWeather() {
-                try {
-                    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`);
-                    const data = await response.json();
-
-                    const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-                    weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon" class="weather-icon">`;
-                    weatherDescription.textContent = data.weather[0].description;
-                    temperature.textContent = `${data.main.temp}°C`;
-                    location.textContent = data.name;
-                } 
-                catch (error) {
-                    console.error('Error fetching weather data:', error);
-                }
-
-                fetchWeather();
-            }
-            </script>
-        </section>   
+       
     </main>
     <footer>
         <div class ="social">
@@ -152,7 +117,7 @@
                 alt="facebook">
             </a>
             <a href = "#" target = "_blank">
-                <img class = "badge" src = "images/Instagram_logo.svg"
+                <img class = "badge" src = "images/instagram_logo.png"
                 alt = "instagram">
             </a>
             <a href="#" target = "_blank">
@@ -163,5 +128,19 @@
         <p>&copy; 2023 Timothy Sansone</p>
         <p>Contact: san21048@byui.edu</p>
     </footer>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-checkbox">
+        <label for="dark-mode-checkbox"></label>
+    </div>
+    <div class="weather-container">
+        <div class="weather-card">
+            <h2>Local Weather</h2>
+            <div id="weather-icon" class="weather-icon"></div>
+            <h3 id="weather-description"></h3>
+            <p id="temperature"></p>
+            <p id="location">Orlando, FL</p>
+        </div>
+    </div>  
+  
 </body>
 </html>

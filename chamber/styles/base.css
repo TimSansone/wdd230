@@ -107,19 +107,7 @@ footer {
 }
 
 
-.weather-card {
-    width: 250px;
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
 
-.weather-icon {
-    width: 100px;
-    height: 5px;
-}
 
 /* Dark mode toggle switch styles */
 .dark-mode-toggle {
@@ -173,28 +161,18 @@ body.dark-mode {
 }
 
 /* Weather card styles */
+/* Add this code to your CSS file (e.g., "styles/large.css") */
 .weather-container {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 300px;
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .weather-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
+    background: #f0f0f0; /* Add background color if desired */
+    padding: 20px;
+    border: 1px solid #ddd; /* Add border if desired */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow for a card effect */
 }
 
-.weather-icon img {
-    max-width: 50px;
-    height: auto;
-}
-
-.weather-description {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
 
 .temperature {
     font-size: 1.5rem;

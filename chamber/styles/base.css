@@ -199,3 +199,58 @@ body.dark-mode {
 .temperature {
     font-size: 1.5rem;
 }
+
+/* Nav for mobile viewing */
+
+nav {
+    font-family: var(--text-font);
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    top: 9rem;
+    width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+#navButton {
+    display: block;
+    font-size: 2rem;
+    padding: .5rem .75rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+#navButton::before {
+    content: "≣";
+}
+
+.nav-menu{
+    margin: 0 auto;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu li{
+    display: none;
+    background-color: #004f7a8d;
+    max-width: 50%;
+}
+
+.nav-menu a{
+    display: block;
+}
+
+.open li{
+    display:block;
+}
+
+#navButton.open::before{
+    content: "❌"
+}

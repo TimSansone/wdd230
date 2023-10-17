@@ -234,8 +234,12 @@ nav a{
     color: var(--light-text);
 }
 
-#navButton::before {
+#navButton.open::before {
     content: "≣";
+}
+
+#navButton.closed::before {
+	content: "≣";
 }
 
 .nav-menu{

@@ -30,10 +30,15 @@ hi {
 
 }
 
-.banner-img img {
-    max-width:100%;
-    object-fit: scale-down;
-    margin: -1 rem;
+.banner-image {
+    height: 400px;
+    width: auto;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
 }
 
 .card {
@@ -81,15 +86,11 @@ footer {
 }
 
 .navigation {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	list-style: none;
 	background-color: #333;
 	color: #fff;
-	position: absolute;
-	top: 5rem;
-	right: 0;
-	z-index: 1;
 }
 
 .navigation li {
@@ -215,6 +216,7 @@ nav {
     position: absolute;
     top: 9rem;
     width: 100%;
+    height: 60px;
 }
 
 nav a{
@@ -239,11 +241,7 @@ nav a{
 }
 
 #navButton::before {
-    content: "☰";
-  }
-
-#navButton.open::before {
-    content: "❌";
+    content: "≣";
 }
 
 .nav-menu{
@@ -255,7 +253,6 @@ nav a{
 
 .nav-menu li{
     display: none;
-    background-color: #004f7a8d;
     max-width: 50%;
 }
 
@@ -267,3 +264,6 @@ nav a{
     display:block;
 }
 
+#navButton.open::before{
+    content: "❌"
+}

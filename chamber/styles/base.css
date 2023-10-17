@@ -246,10 +246,6 @@ nav a{
     content: "❌";
 }
 
-#navButton.closed::before {
-	content: "≣";
-}
-
 .nav-menu{
     margin: 0 auto;
     max-width: 760px;

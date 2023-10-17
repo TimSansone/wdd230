@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,17 +11,17 @@
     <link rel ="icon" href="images/favicon.ico.svg">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="icon" href="favicon.ico">
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/hamburger-menu.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/darkmode.js"></script>
-    <meta property="og:title" content="Website for Orlando Florida Chanber of Commerce">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/hamburger-menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/darkmode.js"></script>
+    <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" href="images/orlando_florida.jpg">
+    <meta property="og:image" content="images/orlando_florida.jpg">
     <meta property="og:url" content="https://timsansone.github.io/wdd230/chamber/index.html">
 </head>
 <body>
@@ -29,7 +30,7 @@
     </header>
     <nav>
         <button id="navButton"></button>
-        <ul class="menu">
+        <ul class="nav-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Membership</a></li>
@@ -38,20 +39,19 @@
         </ul>
     </nav>
     <div class = "banner-image">
-        <img src="images/orlando_florida.jpg" alt = "Lake Eola" 
-        width = "3000" height = "921">
+        <img src="images/orlando_florida.jpg" alt = "Lake Eola">
     </div>
     <main>
     <section>
         <div class="card">
-            <sectin id="general-information">
+            <section id="general-information">
                 <h2>Current Events</h2>
                 <br>
                 <p>This is where I will place some current event 
                     information</p>
-                </p>
-                </p>
-                </p>
+                <p>Date: </p>
+                <p>Time: </p>
+                <p>Location: </p>
             </div>
         </div>
         <div class="card">
@@ -74,7 +74,7 @@
                 <br>
                 <p>This is where I will place some local businesses
                     information</p>
-                <p>Local Busieness #1</p>
+                <p>Local Business #1</p>
                 <p>Descrition</p>
                 <p>Phone:</p>
                 <p>Email:</p>
@@ -86,7 +86,7 @@
             <p>This is where I will place some local businesses
                 information</p>
             </p>
-            <p>Local Busieness #2</p>
+            <p>Local Business #2</p>
             <p>Descrition</p>
             <p>Phone:</p>
             <p>Email:</p>
@@ -98,7 +98,7 @@
             <p>This is where I will place some local businesses
                 information</p>
             </p>
-            <p>Local Busieness #2</p>
+            <p>Local Business #3</p>
             <p>Descrition</p>
             <p>Phone:</p>
             <p>Email:</p>

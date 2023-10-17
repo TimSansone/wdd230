@@ -267,6 +267,3 @@ nav a{
     display:block;
 }
 
-#navButton.open::before{
-    content: "❌"
-}

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero picture {
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 1rem black;
+}
+
+.hero {
+  position: relative;
+}
+
+/* Media query for medium-sized screens */
+@media (max-width: 1000px) {
+  .hero {
+    background-image: url('images/hero-medium.webp');
+  }
+}
+
+/* Media query for small screens */
+@media (max-width: 500px) {
+  .hero {
+    background-image: url('images/hero-small.webp');
+  }
+}
+
+/* Additional styling for text inside the hero element */
+.hero span {
+  color: #ffffff;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

@@ -18,6 +18,7 @@
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/hamburger-menu.js"></script>
     <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/windchill.js"></script>
     <script defer src="scripts/darkmode.js"></script>
     <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
     <meta property="og:type" content="website">
@@ -38,9 +39,16 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <div class = "banner-image">
-        <img src="images/orlando_florida.jpg" alt = "Lake Eola">
-    </div>
+    <div class="hero">
+        <picture>
+             <source media="(max-width: 400px)" srcset="images/wdd230-org(small).webp" alt="Hero Image Small">
+             <source media="(max-width: 960px)" srcset="images/wdd230-org(medium).webp" alt="Hero Image Medium">
+             <img src="images/wdd230-org(large).webp" alt="Hero Image Large" width="1278" height="800">
+         </picture>
+         <div class="hero-label">
+            <p>Hero image</p>
+        </div>
+     </div>
     <main>
     <section>
         <div class="card">
@@ -133,11 +141,13 @@
     </div>
     <div class="weather-container">
         <div class="weather-card">
-            <h2>Local Weather</h2>
+            <h2>Current Orlando, Florida Weather</h2>
             <div id="weather-icon" class="weather-icon"></div>
-            <h3 id="weather-description"></h3>
+            <p id="weather-description"></p>
             <p id="temperature"></p>
-            <p id="location">Orlando, FL</p>
+            <p id="wind-speed"></p>
+            <p id="wind-chill"></p>
+            <p>It's going to be a lovely day!</p>
         </div>
     </div>  
   

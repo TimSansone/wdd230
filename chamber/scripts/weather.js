@@ -1,22 +1,20 @@
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
-const city = 'Orlando';
-const countryCode = 'US';
-const weatherIcon = document.getElementById('weather-icon');
-const weatherDescription = document.getElementById('weather-description');
-const temperature = document.getElementById('temperature');
+const apiKey = '4f73375e6cd748288b214e4f79bb62b4';
 
-async function fetchWeather() {
-    try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`);
-        const data = await response.json();
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Orlando,us&appid=${apiKey}&units=metric`;
 
-        const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-        weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon" class="weather-icon">`;
-        weatherDescription.textContent = data.weather[0].description;
-        temperature.textContent = `${data.main.temp}°C`;
-    } catch (error) {
-        console.error('Error fetching weather data:', error);
-    }
-}
+fetch(apiUrl)
+  .then((response) => response.json())
+  .then((data) => {
+    // Extract the relevant weather information
+    const temperatureCelsius = data.main.temp;
+    const temperatureFahrenheit = ((temperatureCelsius * 9 / 5) + 32).toFixed(1);
+    const windSpeed = data.wind.speed.toFixed(1);
+    const windSpeedMilesPerHour = (windSpeed * 2.23694).toFixed(1);
+    const weatherDescription = data.weather[0].description;
 
-fetchWeather();
+    // Update the HTML elements with the weather information
+    document.getElementById('temperature').textContent = `Temperature: ${temperatureFahrenheit} °F`;
+    document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMilesPerHour} mph`;
+    document.getElementById('weather-description').textContent = `Description: ${weatherDescription}`;
+  })
+  .catch((error) => console.error(error));

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+table{
+    max-width: 40%;
+    margin: 50px auto;
+}
+
+th, td{
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    padding: 25px;
+    text-align: center;
+}
+
+
+caption {
+    padding: 10px;
+    font-size: 2rem;
+    background-color: hsl(224, 89%, 32%);
+    color: snow;
+}
+
+thead th{
+    background-color: rgb(37, 9, 63);
+    color: snow;
+}
+
+tr:nth-child(odd){
+    background-color: #c6eaff;
+}
+
+tr:nth-child(even){
+    background-color: #9ea8ff;
+}
+
+tr:nth-child(4) td:nth-child(3){    
+    background-color: #6347ff;
+}
+
+tfoot td{
+    font-size: larger;
+    background-color: hsl(224, 89%, 32%);
+    color: snow;
+}

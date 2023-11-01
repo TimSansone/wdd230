@@ -353,3 +353,18 @@ nav a{
     margin-bottom: 20px; /* Add a margin at the bottom to create space */
     padding-bottom: 2rem;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+.label {
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+}
+
+#visits {
+	color: navy;
+	font-weight: bolder;
+	font-size: larger;
+}

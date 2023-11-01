@@ -18,8 +18,8 @@
     <script defer src="scripts/getdates.js"></script>
     <script defer src="scripts/hamburger-menu.js"></script>
     <script defer src="scripts/weather.js"></script>
-    <script defer src="scripts/windchill.js"></script>
     <script defer src="scripts/darkmode.js"></script>
+    <script defer src="scripts/windchill.js"></script>
     <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/orlando_florida.jpg">
@@ -32,20 +32,20 @@
     <nav>
         <button id="navButton"></button>
         <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
             <li><a href="#">Membership</a></li>
             <li><a href="#">Coming Events</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <div class="hero">
+    <div class = "banner-image">
         <picture>
-             <source media="(max-width: 500px)" srcset="images/wdd230-org(small)2.webp" alt="Hero Image Small">
-             <source media="(max-width: 1000px)" srcset="images/wdd230-org(medium)2.webp" alt="Hero Image Medium">
-             <img src="images/wdd230-org(large)2.webp" alt="Hero Image Large" width="1278" height="800">
-         </picture>
-     </div>
+            <src srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
+            <src srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
+            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1500" height="750">
+        </picture>
+    </div>
     <main>
     <section>
         <div class="card">
@@ -138,13 +138,13 @@
     </div>
     <div class="weather-container">
         <div class="weather-card">
-            <h2>Current Orlando, Florida Weather</h2>
+            <h2>Local Weather</h2>
             <div id="weather-icon" class="weather-icon"></div>
-            <p id="weather-description"></p>
+            <h3 id="weather-description"></h3>
             <p id="temperature"></p>
             <p id="wind-speed"></p>
             <p id="wind-chill"></p>
-            <p>It's going to be a lovely day!</p>
+            <p id="location">Orlando, FL</p>
         </div>
     </div>  
   

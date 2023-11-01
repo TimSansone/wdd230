@@ -20,6 +20,7 @@
     <script defer src="scripts/weather.js"></script>
     <script defer src="scripts/darkmode.js"></script>
     <script defer src="scripts/windchill.js"></script>
+    <script defer src="scripts/visitcounter.js"></script>
     <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/orlando_florida.jpg">
@@ -71,6 +72,7 @@
             <p>Community Calendar</p>
             <br>
         </div>
+
     </section>
     <br>
     <section id="local-information">
@@ -107,12 +109,15 @@
             <p>Descrition</p>
             <p>Phone:</p>
             <p>Email:</p>
-
         </div>
         <br>
+        <div class="card">
+            <h1>⚙️ Using localStorage</h1>
+	        <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+        </div>
         
     </section>
-       
+
     </main>
     <footer>
         <div class ="social">
@@ -131,6 +136,7 @@
         </div>
         <p>&copy; 2023 Timothy Sansone</p>
         <p>Contact: san21048@byui.edu</p>
+        
     </footer>
     <div class="dark-mode-toggle">
         <input type="checkbox" id="dark-mode-checkbox">

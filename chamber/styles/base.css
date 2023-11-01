@@ -30,15 +30,11 @@ hi {
 
 }
 
-.banner-image {
-    height: 400px;
-    width: auto;
-    overflow: hidden;
-}
-
-.banner-image img {
-    width: 100%;
-    height: auto;
+#banner-image img {
+    object-fit: scale-down;
+    height: 250px;
+    width: 250px;
+    margin: -1 rem;
 }
 
 .card {
@@ -216,7 +212,6 @@ nav {
     position: absolute;
     top: 9rem;
     width: 100%;
-    height: 60px;
 }
 
 nav a{
@@ -253,6 +248,7 @@ nav a{
 
 .nav-menu li{
     display: none;
+    background-color: #004f7a8d;
     max-width: 50%;
 }
 
@@ -268,37 +264,92 @@ nav a{
     content: "❌"
 }
 
-.hero {
-    position: relative;
-}
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+  
+.left-bar {
+    float: left; /* Float the sidebar to the left */
+    width: 50%; /* Adjust the width as per your design */
+    margin-right: 20px; /* Add a gap between the sidebar and the main content */
+    background-color: #f2f2f2; /* Background color for the sidebar */
+    padding: 10px; /* Add padding to the sidebar content for spacing */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+  }
+  
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+@media (max-width: 768px) {
+    .container {
+    grid-template-columns: 1fr;
+    }
+  }
 
-.hero picture {
+.grid {
+    float: left;
     width: 100%;
-    text-align: center;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 0 1rem black;
+.photoContainer {
+    float: right; /* Float the photoContainer to the right */
+    width: 30%; /* Adjust the width as per your design */
+    margin-left: 10px; /* Add a gap between the sidebar and photoContainer */
 }
 
-.hero .hero-label p {
-	position: absolute !important;
-	top: 30px;
-	left: 30px;
-	background: radial-gradient(#fff, #cbc3b3);
-	border: 1px solid #cbc3b3;
-	padding: 1.5rem;
-	box-shadow: 0 0 1rem #cbc3b3;
-	opacity: 0.75;
+.photoContainer h3{
+    background-color: var(--secondary-color);
+    padding: 1rem;
 }
 
-.hero-label p {
-	margin: 0;
-	padding: .25rem;
-	font-weight: 700;
-	font-size: 1.5rem;
-	font-family: 'Raleway', serif;
+.grid h3, h4 {
+    font-family: var(--header-font);
+    color: var(--dark-text);
+}
+
+.grid p, span {
+    font-family: var(--text-font);
+    color: var(--dark-text);
+}
+
+.sidePhoto {
+    position: flex;
+    padding: 2rem;
+}
+
+
+.picture-label {
+    position: flex;
+    left: 20px;
+    top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--dark-text);
+    padding: .8rem;
+}
+
+/* Style for the last-visit-message */
+#last-visit-message {
+    margin-bottom: 20px; /* Add a margin at the bottom to create space */
+    padding-bottom: 2rem;
+}
+
+/* Style for the demographics section */
+#demographics {
+    margin-bottom: 20px; /* Add a margin at the bottom to create space */
+    padding-bottom: 2rem;
+}
+
+/* Style for the statistics section */
+#statistics {
+    margin-bottom: 20px; /* Add a margin at the bottom to create space */
+    padding-bottom: 2rem;
+}
+
+/* Style for the Events section */
+#Events {
+    margin-bottom: 20px; /* Add a margin at the bottom to create space */
+    padding-bottom: 2rem;
 }

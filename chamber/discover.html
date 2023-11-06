@@ -35,17 +35,17 @@
         <button id="navButton"></button>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Membership</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
             <li><a href="#">Coming Events</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
     <div class ="banner-image">
         <picture>
-            <src srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
-            <src srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
-            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1500" height="750">
+            <source srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
+            <source srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
+            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1250" height="625" loading=”lazy”>
         </picture>
     </div>
     <main class="grid">
@@ -74,9 +74,9 @@
             <h3>Photos of the Orlando Area</h3>
             <div class="sidePhoto" id="disneyWorld">
                 <picture>
-                    <source srcset="images/walt_disney_world-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/walt_disney_world-750.webp" media="(max-width: 500px)">
-                    <img src="images/walt_disney_world-1000.webp" alt="Civic-Center" loading="lazy">
+                    <source srcset="images/walt_disney_world-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/walt_disney_world-750.webp" media="(max-width: 750px)">
+                    <img src="images/walt_disney_world-1000.webp" alt="disney-world" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="disneyLabel">
                     <span>Walt Disney World</span>
@@ -84,9 +84,9 @@
             </div>
             <div class="sidePhoto" id="cocoaBeach">
                 <picture>
-                    <source srcset="images/cocoa_beach_pier-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/cocoa_beach_pier-750.webp" media="(max-width: 500px)">
-                    <img src="images/cocoa_beach_pier-1000.webp" alt="art-museum" loading="lazy">
+                    <source srcset="images/cocoa_beach_pier-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/cocoa_beach_pier-750.webp" media="(max-width: 750px)">
+                    <img src="images/cocoa_beach_pier-1000.webp" alt="cocoa-beach" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="cocoaBeachLabel">
                     <span>Cocoa Beach Pier</span>
@@ -94,9 +94,9 @@
             </div>
             <div class="sidePhoto" id="wekivaSprings">
                 <picture>
-                    <source srcset="images/wekiva_springs-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/wekiva_springs-750.webp" media="(max-width: 500px)">
-                    <img src="images/wekiva_springs-1000.webp" alt="splash-pad" loading="lazy">
+                    <source srcset="images/wekiva_springs-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/wekiva_springs-750.webp" media="(max-width: 750px)">
+                    <img src="images/wekiva_springs-1000.webp" alt="wekiva-springs" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="wekivaSpringsLabel">
                     <span>Wekiva Springs State Park</span>
@@ -104,9 +104,9 @@
             </div>
             <div class="sidePhoto" id="orlandoScienceCenter">
                 <picture>
-                    <source srcset="images/orlando_science_center-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/orlando_science_center-750.webp" media="(max-width: 500px)">
-                    <img src="images/orlando_science_center-1000.webp" alt="main-park" loading="lazy">
+                    <source srcset="images/orlando_science_center-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/orlando_science_center-750.webp" media="(max-width: 750px)">
+                    <img src="images/orlando_science_center-1000.webp" alt="science-center" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="scienceCenterLabel">
                     <span>Orlando Science Center</span>
@@ -114,9 +114,9 @@
             </div>
             <div class="sidePhoto" id="halloweenHorror">
                 <picture>
-                    <source srcset="images/halloween_hhn-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/halloween_hhn-750.webp" media="(max-width: 500px)">
-                    <img src="images/halloween_hhn-1000.webp" alt="clyderec" loading="lazy">
+                    <source srcset="images/halloween_hhn-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/halloween_hhn-750.webp" media="(max-width: 750px)">
+                    <img src="images/halloween_hhn-1000.webp" alt="hhn-photo" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="halloweenHorrorLabel">
                     <span>Universal Studios Halloween Horror Nights</span>
@@ -124,9 +124,9 @@
             </div>
             <div class="sidePhoto" id="orlandoCitySoccer">
                 <picture>
-                    <source srcset="images/orlando_city_soccer-500.webp" media="(max-width: 300px)">
-                    <source srcset="images/orlando_city_soccer-750.webp" media="(max-width: 500px)">
-                    <img src="images/orlando_city_soccer-1000.webp" alt="springville-library" loading="lazy">
+                    <source srcset="images/orlando_city_soccer-500.webp" media="(max-width: 500px)">
+                    <source srcset="images/orlando_city_soccer-750.webp" media="(max-width: 750px)">
+                    <img src="images/orlando_city_soccer-1000.webp" alt="osc-photo" width="1000" height="500" loading=”lazy”>
                 </picture>
                 <div class="picture-label" id="orlandoCitySoccerLabel">
                     <span>Orlando City Soccer</span>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Chamber of Commerce</title>
+    <meta name="description" content="The site for Orlando Ciy Chamber, 
+    providing information for local businesses, local events, Membership
+    benefits, and fun things to do.">
+    <meta name="author" content="Timothy Sansone">
+    <link rel ="icon" href="images/favicon.ico.svg">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/hamburger-menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/darkmode.js"></script>
+    <script defer src="scripts/windchill.js"></script>
+    <script defer src="scripts/visitcounter.js"></script>
+    <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/orlando_florida.jpg">
+    <meta property="og:url" content="https://timsansone.github.io/wdd230/chamber/index.html">
+</head>
+<body>
+    <header>
+        <h1>Orlando Florida Chamber of Commerce</h1>
+    </header>
+    <nav>
+        <button id="navButton"></button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Coming Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class = "banner-image">
+        <picture>
+            <source srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
+            <source srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
+            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1250" height="625" loading=”lazy”>
+        </picture>
+    </div>
+    <main id="main-join">
+        <div id="div-join">
+            <form action="thankyou.html" name="my-form" method="get">
+                <section class="form-box">
+                    <label for="first">First *</label>
+                    <input type="text" id="first" name="first" placeholder="First Name" required>
+                </section>
+                <section class="form-box">
+                    <label for="last">Last *</label>
+                    <input type="text" id="last" name="last" placeholder="Last Name" required>
+                </section>
+                <section class="form-box">
+                    <label for="position">Position</label>
+                    <input type="text" id="position" name="position" placeholder="Busines Position"
+                        pattern="[- A-Za-z]{7,}">
+                    <!--only accepts alpha charachers, hyphens, and spaces, minimun of seven characters using regular expression pattern-->
+                </section>
+                <section class="form-box">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
+                </section>
+                <section class="form-box">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" name="phone" id="phone" placeholder="___-___-____" required>
+                </section>
+                <section class="form-box">
+                    <label for="busines">Busines *</label>
+                    <input type="text" id="busines" name="busines" placeholder="Busines Name" required>
+                </section>
+                <section class="form-box">
+                    <label for="membership">Membership Level</label>
+                    <select name="membership" id="membership">
+                        <option value="select">-Select-</option>
+                        <option value="NP">Non Profit</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </section>
+                <section class="form-box">
+                    <label for="description">Busines Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10"
+                        placeholder="Type here..."></textarea>
+                    <section class="form-box">
+                        <input type="hidden" id="datetime" name="datetime" value="0">
+                    </section>
+                    <!--hidden field that contains the current date and time that the form was loaded by the user-->
+                </section>
+                <section class="form-box">
+                    <button id="btnSend">Send</button>
+                </section>
+            </form>
+        </div>
+        <div id="memberships">
+            <h3>Membership Levels</h3>
+            <P>Non-Profit ($50/month): Access to networking events and business educational programs. Inclusion in the chamber's online directory. Opportunity to participate in community service initiatives. Access to discounted advertising and sponsorships.</P>
+            <P>Bronze ($100/month): All non-profit membership benefits. Enhanced visibility through a featured listing in the chamber's directory. Opportunity to promote business events through the chamber's communication channels. Access to chamber's resources and market research.</P>
+            <P>Silver Membership ($200/month): All bronze membership benefits. Exclusive networking opportunities with prominent business leaders. Recognition at chamber events and in promotional materials. Access to professional development workshops and seminars.</P>
+            <P>Gold Membership ($300/month): All silver membership benefits. Premier visibility and promotion as a top-tier member. Priority access to high-profile chamber events and speaking engagements. Personalized business support and introductions to key stakeholders.</P>
+            </div>
+    </main>
+    <footer>
+        <div class ="social">
+            <a href="#" target = "_blank">
+                <img class = "badge" src = "images/facebook_icon.png"
+                alt="facebook">
+            </a>
+            <a href = "#" target = "_blank">
+                <img class = "badge" src = "images/instagram_logo.png"
+                alt = "instagram">
+            </a>
+            <a href="#" target = "_blank">
+                <img class = "badge" src = "images/twitter_x_logo.png"
+                alt="twitterx">
+            </a>
+        </div>
+        <p>&copy; 2023 Timothy Sansone</p>
+        <p>Contact: san21048@byui.edu</p>
+        
+    </footer>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-checkbox">
+        <label for="dark-mode-checkbox"></label>
+    </div>
+    <div class="weather-container">
+        <div class="weather-card">
+            <h2>Local Weather</h2>
+            <div id="weather-icon" class="weather-icon"></div>
+            <h3 id="weather-description"></h3>
+            <p id="temperature"></p>
+            <p id="wind-speed"></p>
+            <p id="wind-chill"></p>
+            <p id="location">Orlando, FL</p>
+        </div>
+    </div>  
+  
+</body>
+</html>

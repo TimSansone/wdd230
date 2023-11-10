@@ -19,14 +19,14 @@
 }
 
 /* Media query for medium-sized screens */
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
   .hero {
     background-image: url('images/hero-medium.webp');
   }
 }
 
 /* Media query for small screens */
-@media (max-width: 500px) {
+@media (max-width: 300px) {
   .hero {
     background-image: url('images/hero-small.webp');
   }

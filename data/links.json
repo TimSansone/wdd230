@@ -1,0 +1,84 @@
+{"lessons" : [
+    {"lesson" : "01",
+    "links" : [
+        {
+            "url" : "lesson1/holygrail.html",
+            "title" : "Holy Grail Layout"
+        }
+    ]},
+    {"lesson" :"02",
+    "links" : [
+        {
+            "url" : "lesson2/design-principles.html",
+            "title" : "Design Principles"
+        }
+    ]},
+    {"lesson" : "03",
+    "links" : [
+        {
+            "url" : "lesson03/images/combinator-exercise4.png",
+            "title" : "Combinator Exercises"
+        },
+        {
+            "url" : "https://codepen.io/TimSansone/pen/yLGEJWN",
+            "title": "CSS Pseudo-elements"
+        },
+        {
+            "url" : "https://codepen.io/TimSansone/pen/KKbegpp",
+            "title" : "Responsive Menu Codepen"
+        }
+    ]},
+    {"lesson" : "04",
+    "links" : [
+        {"url" : "https://codepen.io/TimSansone/pen/XWoBGKG",
+        "title" : "Pseudo-class Fun"
+        }
+    ]},
+    {"lesson" : "05",
+    "links" : [
+        {"url" : "lesson05/bom.html",
+        "title" : "BOM Favorite Chapter Application"
+        },
+        {"url" : "lesson03/images/landscape.webp",
+        "title" : "WebP Image Activity"
+        }
+    ]},
+    {"lesson" : "06",
+    "links" : [
+        {"url" : "lesson06/responsive-images.html",
+        "title" : "Responsive Images"
+        }
+    ]},
+    {"lesson" : "07",
+    "links" : [
+        {"url" : "lesson03/lazyload.html",
+        "title" : "Lazy Loading"
+        },
+        {"url" : "lesson05/bom-2.html",
+        "title" : "BOM Favorite Chapters Part 2"
+        }
+    ]},
+    {"lesson" : "08",
+    "links" : [
+        {"url" : "lesson08/tablebuild.html",
+        "title" : "HTML Table Build"
+        },
+        {"url" : "form-practice/index.html",
+        "title" : "Web Forms Practice"
+        },
+        {"url" : "form.html",
+        "title" : "Form Page Assignment"
+        }
+    ]},
+    {"lesson" : "09",
+    "links" : [
+        {"url" : "lesson05/new-ward-members.json",
+        "title" : "JSON Practice"
+        },
+        {"url" : "lesson09/prophets.html",
+        "title" : "Prophets: Fetch Activity"
+        }
+    ]}
+]
+
+}

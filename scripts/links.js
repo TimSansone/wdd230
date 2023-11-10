@@ -1,8 +1,8 @@
-const baseURL = "https://timsansone.github.io/wdd230/";
-const linksURL = "https://timsansone.github.io/wdd230/data/links.json"
+const baseURL = "https://kjirstenhernandez.github.io/wdd230/";
+const linksURL = "https://kjirstenhernandez.github.io/wdd230/data/links.json";
 const mainList = document.querySelector(".list");
 
-async function getLinks() {
+async function getLinks(){
     const response = await fetch(linksURL);
     const data = await response.json();
     console.table(data);
@@ -12,17 +12,19 @@ async function getLinks() {
 const displayLinks = (weeks) => {
     weeks.forEach((weekLesson => {
         const listItem = document.createElement("li");
-        listItem.innerHTML = 'Learning Activity ${weekLesson.lesson}: '
+        listItem.innerHTML = `Learning Activity ${weekLesson.lesson}: `
         let linkList = weekLesson.links;
         linkList.forEach((link => {
             const anchor = document.createElement("a");
             anchor.setAttribute("href", link.url);
             anchor.setAttribute("target", "_blank");
-            anchor.innerHTML = '${link.title} | ';
+            anchor.innerHTML = `${link.title} | `;
             listItem.appendChild(anchor);
             console.log(anchor)
         }));
         mainList.appendChild(listItem);
+        
+
     }))
 }
 

@@ -1,0 +1,33 @@
+{
+    "familyName": "Johnson",
+    "moveInDate": "2023-10-16",
+    "numFamilyMembers": 5,
+    "bishopricVisit": true,
+    "familyMembers": [
+        {
+            "name": "David",
+            "gender": "male",
+            "birthdate": "1983-04-20"
+        },
+        {
+            "name": "Emily",
+            "gender": "female",
+            "birthdate": "1985-06-20"
+        },
+        {
+            "name": "Sophie",
+            "gender": "female",
+            "birthdate": "2011-10-12"
+        },
+        {
+            "name": "Noah",
+            "gender": "male",
+            "birthdate": "2015-03-24"
+        },
+        {
+            "name": "Olivia",
+            "gender": "female",
+            "birthdate": "2018-12-21"
+        }
+    ]
+}

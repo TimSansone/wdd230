@@ -72,7 +72,7 @@
     ]},
     {"lesson" : "09",
     "links" : [
-        {"url" : "lesson05/new-ward-members.json",
+        {"url" : "lesson09/new-ward-members.json",
         "title" : "JSON Practice"
         },
         {"url" : "lesson09/prophets.html",

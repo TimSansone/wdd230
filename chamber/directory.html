@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Chamber of Commerce</title>
+    <meta name="description" content="The site for Orlando Ciy Chamber, 
+    providing information for local businesses, local events, Membership
+    benefits, and fun things to do.">
+    <meta name="author" content="Timothy Sansone">
+    <link rel ="icon" href="images/favicon.ico.svg">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/hamburger-menu.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/darkmode.js"></script>
+    <script defer src="scripts/windchill.js"></script>
+    <script defer src="scripts/visitcounter.js"></script>
+    <script defer src="scripts/directory.js"></script>
+    <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/orlando_florida.jpg">
+    <meta property="og:url" content="https://timsansone.github.io/wdd230/chamber/index.html">
+</head>
+<body>
+    <header>
+        <h1>Orlando Florida Chamber of Commerce</h1>
+    </header>
+    <nav>
+        <button id="navButton"></button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Discover</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class = "banner-image">
+        <picture>
+            <source srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
+            <source srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
+            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1250" height="625" loading=”lazy”>
+        </picture>
+    </div>
+    <main id="directory-main">
+        <h2>Business directory</h2>
+        <div id="directory"></div>
+
+    </main>
+    <footer>
+        <div class ="social">
+            <a href="#" target = "_blank">
+                <img class = "badge" src = "images/facebook_icon.png"
+                alt="facebook">
+            </a>
+            <a href = "#" target = "_blank">
+                <img class = "badge" src = "images/instagram_logo.png"
+                alt = "instagram">
+            </a>
+            <a href="#" target = "_blank">
+                <img class = "badge" src = "images/twitter_x_logo.png"
+                alt="twitterx">
+            </a>
+        </div>
+        <p>&copy; 2023 Timothy Sansone</p>
+        <p>Contact: san21048@byui.edu</p>
+        
+    </footer>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="dark-mode-checkbox">
+        <label for="dark-mode-checkbox"></label>
+    </div>
+    <div class="weather-container">
+        <div class="weather-card">
+            <h2>Local Weather</h2>
+            <div id="weather-icon" class="weather-icon"></div>
+            <h3 id="weather-description"></h3>
+            <p id="temperature"></p>
+            <p id="wind-speed"></p>
+            <p id="wind-chill"></p>
+            <p id="location">Orlando, FL</p>
+        </div>
+    </div>  
+  
+</body>
+</html>

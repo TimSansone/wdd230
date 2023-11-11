@@ -570,6 +570,39 @@ main div, .column-1{
         flex-direction: column;
     }
 
+.business-week {
+    position: relative;
+}
+.business-week img{
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.business-label {
+    position: absolute;
+    top: 2em;
+    left: 20px;
+    padding: 0px 2em;
+    background-color: #c8bfbcc8;
+    font-family: var(--text-font);
+    color: var(--light-text);
+    box-shadow: 10px 5px 5px #9d9492;
+    margin: 1em 2em;
+}
+
+.business-label h6{
+    font-size: 90%;
+    margin: auto;
+    padding: .5em;
+}
+
+#business-info{
+    background-color: #C8BFBC;
+    font-family: var(--header-font);
+    color: var(--dark-text);
+    font-weight: 300;
+}
+
     /* ----- Grid Display ----- */
     
 

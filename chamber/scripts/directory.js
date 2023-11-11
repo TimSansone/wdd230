@@ -1,4 +1,4 @@
-const url = "https://timsansone.github.io/wdd230/chamber/data/directory.json"
+const url = "https://timsansone.github.io/wdd230/chamber/json/directory.json"
 const cards = document.querySelector("#busCards");
 
 // -- Button Selection and Class Change (Grid vs. List display) -- //

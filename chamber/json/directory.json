@@ -1,56 +1,66 @@
-{
-    "directory" : [
-        {
-            "business" : "Delaney's Tavern",
-            "address" : "1315 S. Orange Ave., Orlando, FL 32806",
-            "phone" : "321-430-8432",
-            "email" : "quilmescerveceria@gmail.com",
-            "logo" : "images/directory-1.png",
-            "membership" : "gold"
-        },
-        {
-            "business" : "House of Mac",
-            "address" : "2435 S. Orange Ave., Orlando, FL 32806",
-            "phone" : "407-601-6542",
-            "website" : "houseofmac.com",
-            "logo" : "images/directory-2.png",
-            "membership" : "bronze"
-        },
-        {
-            "business" : "Will Cleaning",
-            "phone" : "407-227-7752",
-            "website" : "willcleaning.com",
-            "logo" : "images/directory-3.png",
-            "membership" : "gold"
-        },
-        {
-            "business" : "Sebastian Moving and More",
-            "phone" : "407-280-7794",
-            "website" : "sebastianmoving.net",
-            "logo" : "images/directory-4.png",
-            "membership" : "silver"
-        },
-        {
-            "business" : "Elegant Tailor & Cleaners",
-            "address" : "480 N. Orange Ave., Suite 6, Orlando, FL 32801",
-            "phone" : "407-271-8045",
-            "website" : "eleganttailororlando.com",
-            "logo" : "images/directory-5.png",
-            "membership" : "silver"
-        },
-        {
-            "business" : "Bubbles On Wheels",
-            "phone" : "407-378-0357",
-            "website" : "bubblesonwheels.net",
-            "logo" : "images/directory-6.png",
-            "membership" : "silver"
-        },
-        {
-            "business" : "Riker's Automotive & Tire",
-            "phone" : "407-238-9800",
-            "website" : "rikersauto.com",
-            "logo" : "images/directory-7.png",
-            "membership" : "gold"
+{"businesses": [
+    {"name" : "Delaney's Tavern",
+    "address" : "1315 S. Orange Ave.",
+    "phone" : "321-430-8432",
+    "membership" : "Gold",
+    "links" : [
+        {"web" : "www.eatdt.com", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-1.png"
         }
-    ]
-}
+    ]},
+    {"name" : "House of Mac",
+    "address" : "2435 S. Orange Ave.",
+    "phone" : "407-601-6542",
+    "membership" : "Bronze",
+    "links" : [
+        {"web" : "www.houseofmac.com", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-2.png"
+        }
+    ]},
+    {"name" : "Will Cleaning",
+    "address" : "",
+    "phone" : "407-227-7752",
+    "membership" : "Gold",
+    "links" : [
+        {"web" : "www.willcleaning.com", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-3.png"
+        }
+    ]},
+    {"name" : "Sebastian Moving and More",
+    "address" : "",
+    "phone" : "407-280-7794",
+    "membership" : "Silver",
+    "links" : [
+        {"web" : "www.sebastianmoving.net", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-4.png"
+        }
+    ]},
+    {"name" : "Elegant Tailor & Cleaners",
+    "address" : "480 N. Orange Ave.",
+    "phone" : "407-271-8045",
+    "membership" : "Silver",
+    "links" : [
+        {"web" : "www.elganttailororlando.com", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-5.png"
+        }
+    ]},
+    {"name" : "Bubbles On Wheels",
+    "address" : "",
+    "phone" : "407-378-0357",
+    "membership" : "Silver",
+    "links" : [
+        {"web" : "www.bubblesonwheels.net", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-6.png"
+        }
+    ]},
+    {"name" : "Riker's Automotive & Tire",
+    "address" : "5700 Central Florida Pkwy.",
+    "phone" : "407-238-9800",
+    "membership" : "Gold",
+    "links" : [
+        {"web" : "www.rikersauto.com", 
+        "logo" : "https://timsansone.github.io/wdd230/chamber/images/directory-7.png"
+        }
+    ]}
+
+]}

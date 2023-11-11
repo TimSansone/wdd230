@@ -1,49 +1,57 @@
+const url = "https://timsansone.github.io/wdd230/chamber/data/directory.json"
+const cards = document.querySelector("#busCards");
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Get the main container
-    const main = document.querySelector("#directory");
-    // Fetch json
-    fetch("./json/directory.json").then(response => response.json()).then(data => {
-        // Create a new card for every element in the directory
-        data.directory.forEach(element => {
-            // Create a card container
-            let card = document.createElement("div");
-            // Create card content
-            let body = document.createElement("div");
-            let logo = document.createElement("img");
-            let title = document.createElement("h3");
-            let address = document.createElement("p");
-            let phone = document.createElement("p");
-            let a = document.createElement("a");
-            // Get logo ready
-            logo.setAttribute("src", element.logo);
-            logo.setAttribute("alt", `${element.business} logo`);
-            // Get card title ready
-            title.innerText = element.business;
-            title.setAttribute("class", "card-title");
-            // Get address ready
-            address.innerText = element.address;
-            address.setAttribute("class", "card-text");
-            // Get phone ready
-            phone.innerText = element.phone;
-            phone.setAttribute("class", "card-text");
-            // Get email ready
-            a.innerText = element.email;
-            a.setAttribute("class", "card-text");
-            // Append elements
-            body.append(address);
-            body.append(phone);
-            body.append(a);
-            // Add body class
-            body.setAttribute("class", "card-body");
-            // Add card class
-            card.setAttribute("class", "card");
-            // Append body
-            card.append(logo);
-            card.append(title);
-            card.append(body);
-            // Append card
-            main.append(card);
-        });
-    });    
+// -- Button Selection and Class Change (Grid vs. List display) -- //
+const gridbutton = document.querySelector("#gridButton");
+const listbutton = document.querySelector("#listButton");
+const display = document.querySelector("article");
+
+gridbutton.addEventListener("click", () => {
+    display.classList.add("busGrid");
+    display.classList.remove("busList");
 });
+
+listbutton.addEventListener("click", () => {
+    display.classList.add("busList");
+    display.classList.remove("busGrid");
+});
+
+// --  Pulling JSON Data and injecting it into HTML -- //
+
+async function getBusinessData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.table(data);
+    displayBusinessData(data.businesses);
+}
+
+const displayBusinessData = (businesses) => {
+    businesses.forEach((business => {
+        const card = document.createElement("section");
+        card.className = "businessCard";
+        const businessLogo = document.createElement("img");
+        const businessName = document.createElement("h3");
+        const businessAddress = document.createElement("h5");
+        const businessPhone = document.createElement("h5");
+        const businessWeb = document.createElement("h5");
+        const businessLevel = document.createElement("h6");
+        businessLogo.setAttribute("src", business.links[0].logo);
+        businessLogo.setAttribute("alt", `${business.name} logo`);
+        businessLogo.setAttribute("loading", "lazy");
+        businessLogo.setAttribute("width", "800px")
+        businessLogo.setAttribute("height", "300px")
+        businessName.innerHTML = business.name;
+        businessAddress.innerHTML = business.address;
+        businessPhone.innerHTML = business.phone;
+        businessWeb.innerHTML = `${business.links[0].web}`
+        businessLevel.innerHTML = `Level: ${business.membership}`;
+        card.appendChild(businessLogo);
+        card.appendChild(businessName); 
+        card.appendChild(businessAddress); 
+        card.appendChild(businessPhone);
+        card.appendChild(businessWeb); 
+        card.appendChild(businessLevel); 
+        cards.appendChild(card);
+    }))
+}
+getBusinessData(url);

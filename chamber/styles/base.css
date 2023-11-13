@@ -557,18 +557,37 @@ main div, .column-1{
     margin-bottom: 1px;
 }
 
+
+/* Button Section */
+
+.optionButtons {
+    padding: 2rem;
+    text-align: center;
+}
+
+.optionButtons button {
+    margin: 1rem;
+    font-family: var(--text-font);
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    background-color: var(--light-button);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #9d9492;
+}
+
     /* -----  List vs. Grid Display ----- */
 
-    .busGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        align-items: center;
-    }
+.busGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+}
 
-    .busList {
-        display: flex;
-        flex-direction: column;
-    }
+.busList {
+    display: flex;
+    flex-direction: column;
+}
 
 .business-week {
     position: relative;
@@ -607,66 +626,66 @@ main div, .column-1{
     
 
 
-    .busGrid section{
-        text-align: center;
-        background-color: var(--light-button);
-        border: none;
-        border-radius: 10px;
-        margin: 1rem;
-        padding: 2rem;
-    }
+.busGrid section{
+    text-align: center;
+    background-color: var(--light-button);
+    border: none;
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 2rem;
+}
 
-    .busGrid img{
-        border: 2px solid none;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #3333339b;
-        width: auto;
-        max-width: 300px;
-        height: auto;
-    }
+.busGrid img{
+    border: 2px solid none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #3333339b;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+}
 
-    .busGrid h3{
-        font-family: var(--header-font);
-        color: var(--dark-text);
-    }
-    
-    .busGrid h5, h6{
-        font-family: var(--text-font);
-        font-weight: 400;
-        padding: 0;
-        color: var(--dark-text);
-    }
+.busGrid h3{
+    font-family: var(--header-font);
+    color: var(--dark-text);
+}
+ 
+.busGrid h5, h6{
+    font-family: var(--text-font);
+    font-weight: 400;
+    padding: 0;
+    color: var(--dark-text);
+}
 
-    .busGrid section > * {
-        margin: 1rem;
-    }
+.busGrid section > * {
+    margin: 1rem;
+}
 
 
     /* ----- List Display ----- */
 
-    .busList section{
-        display: grid;
-        grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
-        margin: 0;
-        padding: 0.5rem;
-    }
+.busList section{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0.5rem;
+}
 
-    .busList section > * {
-        margin: 0 1rem;
-    }
+.busList section > * {
+    margin: 0 1rem;
+}
 
-    .busList section img{
-        display: none;
-    }
+.busList section img{
+    display: none;
+}
 
-    .busList section h3{
-        font-family: var(--text-font);
-        font-weight: 600;
-        font-size: 1rem;
-    }
+.busList section h3{
+    font-family: var(--text-font);
+    font-weight: 600;
+    font-size: 1rem;
+}
 
-    .busList h5, h6 {
-        font-family: var(--text-font);
-        font-size: 1rem;
-        font-weight: 400;
-    }
+.busList h5, h6 {
+    font-family: var(--text-font);
+    font-size: 1rem;
+    font-weight: 400;
+}

@@ -30,5 +30,14 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .business-label{
+    top: 2.5em;
+}
+.business-label h6{
+    font-size: 110%;
+    margin: auto;
+    padding: 1em;
+}
     
 }

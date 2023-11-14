@@ -57,4 +57,13 @@
         margin: 1em auto;
         min-width: 100%
     }
+
+    .business-label {
+    top: 3em;
+}
+.business-label h6{
+    font-size: 120%;
+    margin: auto;
+    padding: 1em;
+}
 }

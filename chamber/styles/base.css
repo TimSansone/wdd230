@@ -417,7 +417,7 @@ form label.top input, form label.top select {
     font-size: 1rem;
     border: solid 1px #999;
     border-radius: 4px;
-    padding: .75 rem;
+    padding: .75rem;
     color: #555;
     width: 100%;
     max-width: 20rem;
@@ -434,8 +434,8 @@ form input.submitBtn {
     border: none;
     background-color: #9c2c13;
     color: white;
-    border-radius: 1 rem;
-    padding: .75 rem 1.5 rem;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
     margin: 0 0 2rem 2%;
     width: 96%;
     max-width: 20rem;

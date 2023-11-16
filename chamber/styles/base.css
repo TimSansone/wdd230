@@ -329,13 +329,13 @@ nav a{
 }
 
 .sidePhoto {
-    position: flex;
+    position: relative;
     padding: 2rem;
 }
 
 
 .picture-label {
-    position: flex;
+    position: absolute;
     left: 20px;
     top: 10px;
     background-color: var(--secondary-color);

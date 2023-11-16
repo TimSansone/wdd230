@@ -6,6 +6,19 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
+:root{
+    --primary-color: #00507A;
+    --secondary-color: #C8BFBC;
+    --accent1-color: #11202C;
+    --accent2-color: #FCA311;
+    --light-text: #FFFFFF;
+    --dark-text: #11202C;
+    --mode-color: #ffffff;
+    --header-font: "Bitter", Tahoma, serif;
+    --text-font: "Open Sans", sans-serif;
+    --light-button: #e5dedb;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -645,12 +658,12 @@ main div, .column-1{
 }
 
 .busGrid h3{
-    font-family: var(--header-font);
+    font-family: Arial, sans-serif;
     color: var(--dark-text);
 }
  
 .busGrid h5, h6{
-    font-family: var(--text-font);
+    font-family: Arial, sans-serif;
     font-weight: 400;
     padding: 0;
     color: var(--dark-text);

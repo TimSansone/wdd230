@@ -66,4 +66,8 @@
     margin: auto;
     padding: 1em;
 }
+
+    #weather {
+    text-align: center;
+}
 }

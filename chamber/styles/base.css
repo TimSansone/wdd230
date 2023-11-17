@@ -135,6 +135,23 @@ footer {
     height: 5px;
 }
 
+#weather{
+    margin: 1em;
+    padding: 2em;
+    background-color: #C8BFBC;
+}
+
+#weather p{
+    font-family: var(--text-font);
+    color: var(--dark-text);
+    font-size: 90%;
+    font-weight: 600;
+}
+
+#weather p span{
+    font-weight: 400;
+}
+
 /* Dark mode toggle switch styles */
 .dark-mode-toggle {
     position: fixed;

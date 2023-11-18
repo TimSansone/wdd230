@@ -43,14 +43,3 @@ function renderForecastData(forecastData) {
 getForecastData().then(data => {
     renderForecastData(data);
 });
-In this code:
-
-The getForecastData function fetches the forecast data from the provided URL and returns it as a JSON object.
-The renderForecastData function processes the fetched forecast data, extracts the forecasted temperatures for the next 4 days, and then displays this data in the HTML. The temperatures are displayed in a container element with the id "forecastContainer" specified in the HTML.
-Remember to include a <div> with the id "forecastContainer" in your HTML code to display the forecasted temperatures.
-
-
-<div id="forecastContainer">
-  <!-- Forecast temperatures will be displayed here -->
-</div>
-This JavaScript code fetches the forecasted temperatures for the next 4 days from the OpenWeatherMap API and dynamically displays them in the specified HTML container.

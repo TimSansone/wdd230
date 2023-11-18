@@ -51,20 +51,15 @@
     </div>
     <main>
     <section>
-	    <div class="flex-1">
-	    	<div id="weather">
-                	<p>Current Temperature: <span id="currentTemp"></span></p>
-                	<span id="weatherDesc"></span>
-                	<br>
-                	<img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
-                	<section id="futureForecast">
-                    	<p>Upcoming High Temperatures</p>
-                	</section>
-		</div>
-		    <div id="forecastContainer">
-  	<!-- Forecast temperatures will be displayed here -->
-			</div>
-            </div>
+	<div class="weather-card">
+    		<h2>Current Weather</h2>
+    		<p id="currentTemp">Loading...</p>
+    		<img id="weatherIcon" src="" alt="Weather Icon">
+    		<h2>4-Day Forecast</h2>
+    		<div id="forecastContainer">
+        	<!-- Forecasted temperatures will be displayed here -->
+    		</div>
+	</div>
         <div class="card">
             <section id="general-information">
                 <h2>Current Events</h2>

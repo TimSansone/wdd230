@@ -1,4 +1,4 @@
-const banner = document.querySelector(".meetandgreet")
+const banner = document.querySelector(".meetandgreet");
 const closeButton = document.querySelector("#mgClose");
 const today = Date.now();
 const dayObject = new Date(today);

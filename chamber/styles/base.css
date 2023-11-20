@@ -135,23 +135,6 @@ footer {
     height: 5px;
 }
 
-#weather{
-    margin: 1em;
-    padding: 2em;
-    background-color: #C8BFBC;
-}
-
-#weather p{
-    font-family: var(--text-font);
-    color: var(--dark-text);
-    font-size: 90%;
-    font-weight: 600;
-}
-
-#weather p span{
-    font-weight: 400;
-}
-
 /* Dark mode toggle switch styles */
 .dark-mode-toggle {
     position: fixed;
@@ -230,6 +213,44 @@ body.dark-mode {
 .temperature {
     font-size: 1.5rem;
 }
+
+.flex-1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.flex-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+/* Meet and Green Banner */
+        #mgClose::before { 
+            content: "❌";
+            padding: 0;
+            margin: -1rem 0;
+        }
+        #mgClose {
+            position: absolute;
+            left: 1px;
+            background-color: #004f7a00;
+            border: none;
+        }
+        .meetandgreet {
+            position: fixed;
+            left: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #fca211a7;
+            border: 1px solid #091223a9;
+        }
+
+        .meetandgreet p{
+            padding: 0 10px 0 50px;
+        }
 
 /* Nav for mobile viewing */
 
@@ -720,4 +741,3 @@ main div, .column-1{
     font-size: 1rem;
     font-weight: 400;
 }
-

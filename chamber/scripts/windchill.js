@@ -14,10 +14,10 @@ const windSpeedMilesPerHour = parseFloat(document.getElementById('wind-speed').t
 
 function calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour) {
     if (temperatureFahrenheit >= 50 || windSpeedMilesPerHour < 3) {
-        document.getElementById('wind-chill').textContent = `Wind Chill: N/A`;
+        document.getElementById('wind-chill').textContent = 'Wind Chill: N/A';
     } else {
         const windChill = 35.74 + 0.6215 * temperatureFahrenheit - 35.75 * Math.pow(windSpeedMilesPerHour, 0.16) + 0.4275 * temperatureFahrenheit * Math.pow(windSpeedMilesPerHour, 0.16);
-        document.getElementById('wind-chill').textContent = `Wind Chill: ${windChill}°F`;
+        document.getElementById('wind-chill').textContent = 'Wind Chill: ${windChill}°F';
     }
 }
 

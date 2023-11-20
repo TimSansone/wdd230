@@ -15,12 +15,6 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="icon" href="favicon.ico">
-    <script defer src="scripts/forecast.js"></script>
-    <script defer src="scripts/getdates.js"></script>
-    <script defer src="scripts/hamburger-menu.js"></script>
-    <script defer src="scripts/weather.js"></script>
-    <script defer src="scripts/darkmode.js"></script>
-    <script defer src="scripts/visitcounter.js"></script>
     <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/orlando_florida.jpg">
@@ -48,17 +42,25 @@
         </picture>
     </div>
     <main>
-    <section>
-	<div class="weather-card">
-    		<h2>Current Weather</h2>
-    		<p id="currentTemp">Loading...</p>
-    		<img id="weatherIcon" src="" alt="Weather Icon">
-    		<h2>4-Day Forecast</h2>
-    		<div id="forecastContainer">
-        	<!-- Forecasted temperatures will be displayed here -->
-    		</div>
-	</div>
-        <div class="card">
+        <div class="meetandgreet">
+            <button id="mgClose"></button>
+        </div>
+        <div class="flex-1">
+            <div id="mission-statement">
+                <p>Welcome to the Orlando Chamber of Commerce website. We are dedicated to driving economic prosperity, enhancing the quality of life, and promoting a business-friendly environment. Join us on this journey of growth and discovery – where the possibilities are as endless as the Florida horizon. Welcome to Orlando, where business meets opportunity!</p>
+            </div>
+            <div id="weather">
+                <p>Current Orlando Temperature: <span id="currentTemp"></span></p>
+                <span id="weatherDesc"></span>
+                <br>
+                <img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
+                <section id="futureForecast">
+                    <p>Upcoming High Temperatures</p>
+                </section>
+            </div>
+        </div>
+        
+        <div class="flex-2">
             <section id="general-information">
                 <h2>Current Events</h2>
                 <br>
@@ -67,22 +69,17 @@
                 <p>Date: </p>
                 <p>Time: </p>
                 <p>Location: </p>
-            </div>
-        </div>
-        <div class="card">
             <h2>Things To Do</h2>
             <br>
             <p>Placeholder for now</p>
             <br>
-        </div>
-        <div class="card">
             <h2>Community Calendar</h2>
             <br>
             <p>Community Calendar</p>
             <br>
-        </div>
+            </section>
+            </div>
 
-    </section>
     <br>
     <section id="local-information">
             <div class="card">
@@ -95,13 +92,11 @@
                 <p>Phone:</p>
                 <p>Email:</p>
             </div>
-        </div>
         <div class="card">
             <h2>Local Business</h2>
             <br>
             <p>This is where I will place some local businesses
                 information</p>
-            </p>
             <p>Local Business #2</p>
             <p>Descrition</p>
             <p>Phone:</p>
@@ -113,7 +108,6 @@
             <p>Info for new residents</p>
             <p>This is where I will place some local businesses
                 information</p>
-            </p>
             <p>Local Business #3</p>
             <p>Descrition</p>
             <p>Phone:</p>
@@ -125,8 +119,7 @@
 	        <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
         </div>
         
-    </section>
-
+        </section>
     </main>
     <footer>
         <div class ="social">
@@ -151,17 +144,11 @@
         <input type="checkbox" id="dark-mode-checkbox">
         <label for="dark-mode-checkbox"></label>
     </div>
-    <div class="weather-container">
-        <div class="weather-card">
-            <h2>Local Weather</h2>
-            <div id="weather-icon" class="weather-icon"></div>
-            <h3 id="weather-description"></h3>
-            <p id="temperature"></p>
-            <p id="wind-speed"></p>
-            <p id="wind-chill"></p>
-            <p id="location">Orlando, FL</p>
-        </div>
-    </div>  
-  
+    <script src="scripts/banner.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger-menu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/visitcounter.js"></script>
 </body>
 </html>

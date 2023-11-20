@@ -1,32 +1,89 @@
-const apiKey = '4f73375e6cd748288b214e4f79bb62b4';
+const currentURL = "https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&appid=5a8231c5a5421807f22f48fd534cb44d&units=imperial";
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=28.54&lon=-81.38&appid=5a8231c5a5421807f22f48fd534cb44d&units=imperial";
+const currentTemp = document.querySelector("#currentTemp");
+const icon = document.querySelector("#weatherIcon");
+const weatherDescription = document.querySelector("#weatherDesc");
+const forecast = document.querySelector("#futureForecast");
 
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Orlando,us&appid=${apiKey}&units=metric`;
+// Setting up today's date
+const currentDay = Date.now();
+const todayObject = new Date(currentDay);
+const todayWeekday = todayObject.toLocaleString("en-US", {weekday: "long"}); 
+const todayMonth = todayObject.toLocaleString("en-US", {month: "long"}); 
+const todayDay = todayObject.toLocaleString("en-US", {day: "numeric"});
+const todayYear = todayObject.toLocaleString("en-US", {year: "numeric"});
 
-function calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour) {
-    if (temperatureFahrenheit < 50 && windSpeedMilesPerHour >= 3) {
-        const windChill = 35.74 + 0.6215 * temperatureFahrenheit - 35.75 * Math.pow(windSpeedMilesPerHour, 0.16) + 0.4275 * temperatureFahrenheit * Math.pow(windSpeedMilesPerHour, 0.16);
-        return windChill.toFixed(1); // Round to one decimal place
+async function getCurrentWeatherData() {
+    try{
+        const response = await fetch(currentURL);
+        if (response.ok){
+            const data = await response.json();
+            console.table(data);
+            displayCurrentWeather(data);
+        }
+        else {
+            throw Error(await response.text);
+        }
     }
-    return "N/A";
+    catch (error){
+        console.log(error);
+    }
 }
 
-fetch(apiUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    // Extract the relevant weather information
-    const temperatureCelsius = data.main.temp;
-    const temperatureFahrenheit = ((temperatureCelsius * 9 / 5) + 32).toFixed(1);
-    const windSpeed = data.wind.speed.toFixed(1);
-    const windSpeedMilesPerHour = (windSpeed * 2.23694).toFixed(1);
-    const weatherDescription = data.weather[0].description;
+async function getForecastWeatherData() {
+    try{
+        const response = await fetch(forecastURL);
+        if (response.ok){
+            const data = await response.json();
+            console.table(data);
+            displayForecastWeather(data);
+        }
+        else {
+            throw Error(await response.text);
+        }
+    }
+    catch (error){
+        console.log(error);
+    }
+}
 
-    // Calculate wind chill
-    const windChill = calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour);
+function displayCurrentWeather(data) {
+    currentTemp.innerHTML = `${data.main.temp}° F`;
+    console.log(data.weather[0].description);
+    icon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+    weatherDescription.innerHTML = data.weather[0].description;
+}
 
-    // Update the HTML elements with the weather information and wind chill
-    document.getElementById('temperature').textContent = `Temperature: ${temperatureFahrenheit} °F`;
-    document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMilesPerHour} mph`;
-    document.getElementById('weather-description').textContent = `Description: ${weatherDescription}`;
-    document.getElementById('wind-chill').textContent = `Wind Chill: ${windChill} °F`;
-  })
-  .catch((error) => console.error(error));
+function displayForecastWeather(data) {
+    // forecast.innerHTML = '';
+    data.list.forEach(entry => {
+        // convert OpenWeather dates
+        const unixDT = entry.dt;
+        const milliseconds = unixDT * 1000;
+        const dateObject = new Date(milliseconds);
+        const weekday = dateObject.toLocaleString("en-US", {weekday: "long"}); 
+        const month = dateObject.toLocaleString("en-US", {month: "long"}); 
+        const day = dateObject.toLocaleString("en-US", {day: "numeric"});
+        const year = dateObject.toLocaleString("en-US", {year: "numeric"});
+        const hour = dateObject.toLocaleString("en-US", {hour: "numeric"});
+
+        if (weekday !== todayWeekday || (weekday === todayWeekday && hour === "14")) {
+    const checkDay = weekday;
+
+    if (hour === "14") {
+        const forecastHigh = entry.main.temp_max;
+        const date = document.createElement("span");
+        date.innerHTML = `${weekday}, ${month} ${day}, ${year}:`;
+        const high = document.createElement("p");
+        high.innerHTML = `${forecastHigh}° F`;
+
+        forecast.appendChild(date);
+        forecast.appendChild(high);
+    }
+}
+
+    });
+}
+
+getCurrentWeatherData();
+getForecastWeatherData();

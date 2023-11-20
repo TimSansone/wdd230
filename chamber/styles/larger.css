@@ -1,9 +1,9 @@
-@media only screen and (min-width: 50em){
+@media only screen and (min-width: 40em){
 
-    /* nav ul{
+    nav ul{
         display: flex;
         justify-content: space-evenly;
-    } */
+    } 
 
     .menu {
         display: flex;
@@ -58,16 +58,48 @@
         min-width: 100%
     }
 
-    .business-label {
-    top: 3em;
-}
-.business-label h6{
-    font-size: 120%;
-    margin: auto;
-    padding: 1em;
+    .nav-menu li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+/* Join Page */
+    /*----------------*/
+    #main-join{
+        display: flex;
+    }
+    .form-box{
+      flex-direction: row;
+    }
+    .form-box label{
+        flex-basis: 7rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .form-box button{
+        margin-left: 7rem;
+    }
+    .form-box input, 
+    .form-box select, 
+    .form-box textarea{
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    } 
+    form{
+        width: 100%;
+    }  
+    #div-join{
+        grid-column: 1/4;
+        z-index: 0;
+    }
+    
 }
 
-    #weather {
-    text-align: center;
+/****** Directory Page ******/
+.menu{
+    margin-left: 43%;
 }
-}
+

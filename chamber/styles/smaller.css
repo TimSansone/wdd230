@@ -60,4 +60,176 @@
     .weather-container {
         margin: 20px 0; /* Adjust weather container margin for smaller screens */
     }
+    
+/* Join Page */
+/*----------------*/
+#main-join{
+    /* display: flex;
+    flex-direction: column;
+    text-align: center; */
+    box-sizing: border-box;
+    font: 20px;
+    line-height: 2;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: fit-content;
+}
+    
+*, *::before, *:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#memberships p{
+    text-align: left;
+    padding: 12px;
+}
+
+/* Form */
+select, option, input, label, button{
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+}
+.form-box{
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-box label{
+    display: none;
+}
+.form-box textarea{
+    flex-basis: 100%;
+}
+
+
+/*----------------*/
+/* Thank You Page */
+/*----------------*/
+#thank-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
+/****** Directory Page ******/
+    #content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cardsgrid {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .cardsgrid section {
+        border: 2px solid orange;
+        background-color: lightblue;
+        padding: 30px;
+        text-align: center;
+        width: 300px;
+        margin: 20px;
+    }
+    
+    .cardsgrid section:hover{
+        box-shadow: 5px 5px 9px 3px #888888;
+    }
+    
+    .cardsgrid img {
+        width: 90%;
+    }
+    
+    .cardslist {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .cardslist section {
+        border: 2px solid orange;
+        background-color: lightblue;
+        padding: 30px;
+        text-align: center;
+        width: 95%
+        margin: 20px;
+    }
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }    
+    .menu{
+        margin-left: 37%;
+    }
+    .menu button {
+        
+        padding: 1rem;
+        background-color: var(--blue);
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        align-items: center;
+    }
+    section {
+        padding: 0.5rem;
+    }
+    
+    .cardslist section {
+        display: flex;
+        align-items: center;
+    }
+    
+    .cardsgrid section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cardsgrid section > * {
+        margin: 0.1rem;
+    }
+    
+    .cardslist section {
+        flex-direction: row;
+        justify-content: left;
+    }
+    
+    .cardslist section > * {
+        margin: 0 1rem;
+        text-align: left;
+    }
+    
+    .cardslist section img {
+        display: none; /* smaller viewports only */
+    }
+    .cardslist section .phone {
+        display: none;
+    }
+    .cardslist section .address {
+        display: none;
+    }
+    
+    section h3 {
+        font-size: 1.5rem;
+    }
+    
+    section a {
+        font-family: "Roboto", Arial, sans-serif;
+        font-size: 0.9rem;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    @media (min-width: 700px) {
+        .list section img {
+            display: block;
+        }
+
 }

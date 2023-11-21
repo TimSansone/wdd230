@@ -135,6 +135,15 @@ footer {
     height: 5px;
 }
 
+#popup a{
+	color: #1a0f7c;
+	font-family: 'PT Sans', sans-serif;
+}
+
+#popup button{
+	padding: 5px;
+}
+
 /* Dark mode toggle switch styles */
 .dark-mode-toggle {
     position: fixed;

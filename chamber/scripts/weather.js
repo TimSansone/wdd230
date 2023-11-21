@@ -67,18 +67,18 @@ function displayForecastWeather(data) {
         const year = dateObject.toLocaleString("en-US", {year: "numeric"});
         const hour = dateObject.toLocaleString("en-US", {hour: "numeric"});
 
-        if (weekday !== todayWeekday || (weekday === todayWeekday && hour === "14")) {
-    const checkDay = weekday;
+        if (weekday !== todayWeekday) {
+            const checkDay = weekday;
+    
+            if (hour == "2 PM") {
+                const forecastHigh = entry.main.temp_max;
+                const date = document.createElement("span");
+                date.innerHTML = `${weekday}, ${month} ${day}, ${year}:`
+                const high = document.createElement("p");
+                high.innerHTML = `${forecastHigh}° F`;
 
-    if (hour === "14") {
-        const forecastHigh = entry.main.temp_max;
-        const date = document.createElement("span");
-        date.innerHTML = `${weekday}, ${month} ${day}, ${year}:`;
-        const high = document.createElement("p");
-        high.innerHTML = `${forecastHigh}° F`;
-
-        forecast.appendChild(date);
-        forecast.appendChild(high);
+                forecast.appendChild(date)
+                forecast.appendChild(high);
     }
 }
 

@@ -42,23 +42,28 @@
         </picture>
     </div>
     <main>
-        <div id="mission-statement">
-                <p>Welcome to the Orlando Chamber of Commerce website. We are dedicated to driving economic prosperity, enhancing the quality of life, and promoting a business-friendly environment. Join us on this journey of growth and discovery – where the possibilities are as endless as the Florida horizon. Welcome to Orlando, where business meets opportunity!</p>
+        <div class="meetandgreet">
+            <button id="mgClose"></button>
         </div>
-	<div class="flex-2">
-            <div id="weather">
-                <div class="currentWeather">
-                    <h2>Orlando Weather</h2>
-                    <p>Current Weather: </p>
-                    <span id="currentTemp"></span><br>
-                    <span id="weatherDesc"></span>
-                    <br>
-                    <img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
-                </div>
+        <div class="flex-1">
+            <div id="mission-statement">
+                <p>Welcome to the Orlando Chamber of Commerce website. We are dedicated to driving economic prosperity, enhancing the quality of life, and promoting a business-friendly environment. Join us on this journey of growth and discovery – where the possibilities are as endless as the Florida horizon. Welcome to Orlando, where business meets opportunity!</p>
+            </div>
+            <div id="flex-2">
+                <div id="weather">
+                    <div class="currentWeather">
+                        <h2>Orlando Weather</h2>
+                        <p>Current Weather: </p>
+                        <span id="currentTemp"></span>
+                        <span id="weatherDesc"></span>
+                        <br>
+                        <img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
+                    </div>
                 <section id="futureForecast">
                     <h4>Upcoming High Temperatures</h4>
                 </section>
             </div>
+        </div>
         
         <div class="flex-2">
             <section id="general-information">
@@ -121,10 +126,6 @@
         
         </section>
     </main>
-	<div id="popup">
-        	🤝🏼 <a href="#">Come join us</a> for the chamber meet and greet Wednesday at 7:00 p.m."
-        	<button id="closePopup">❌</button>
-    	</div>
     <footer>
         <div class ="social">
             <a href="#" target = "_blank">
@@ -148,11 +149,11 @@
         <input type="checkbox" id="dark-mode-checkbox">
         <label for="dark-mode-checkbox"></label>
     </div>
-    	<script src="scripts/banner.js"></script>
-    	<script src="scripts/getdates.js"></script>
-    	<script src="scripts/hamburger-menu.js"></script>
-    	<script src="scripts/weather-api.js"></script>
-    	<script src="scripts/darkmode.js"></script>
-    	<script src="scripts/visitcounter.js"></script>
+    <script src="scripts/banner.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/hamburger-menu.js"></script>
+    <script src="scripts/weather-api.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/visitcounter.js"></script>
 </body>
 </html>

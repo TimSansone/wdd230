@@ -1,65 +1,87 @@
 // URLs for fetching data
-const currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&appid=5a8231c5a5421807f22f48fd534cb44d&units=imperial";
+const currentURL = "https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&appid=5a8231c5a5421807f22f48fd534cb44d&units=imperial";
 const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=28.54&lon=-81.38&appid=5a8231c5a5421807f22f48fd534cb44d&units=imperial";
+const currentTemp = document.querySelector("#currentTemp");
+const icon = document.querySelector("#weatherIcon");
+const weatherDescription = document.querySelector("#weatherDesc");
+const forecast = document.querySelector("#futureForecast");
+
+//Setting up today's date
+const currentDay = Date.now();
+const todayObject = new Date(currentDay);
+const todayWeekday = todayObject.toLocaleString("en-US", {weekday: "long"});
+const todayMonth = todayObject.toLocaleString("en-US", {month: "long"});
+const todayDay = todayObject.toLocaleString("en-US", {day: "numeric"});
+const todayYear = todayObject.toLocaleString("en-US", {year: "numeric"});
 
 // Fetch current weather data
 async function getCurrentWeatherData() {
-    try {
-        const response = await fetch(currentWeatherURL);
+    try{
+        const response = await fetch(currentURL);
         if (response.ok) {
             const data = await response.json();
-            const currentTemp = data.main.temp;
-            const weatherIcon = data.weather[0].icon;
+            displayCurrentWeather(data);
+        }
 
-            // Display current temperature and weather icon in the HTML card
-            document.getElementById("currentTemp").innerHTML = `${currentTemp}° F`;
-            document.getElementById("weatherIcon").src = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
-        } else {
+        else {
             throw Error(await response.text());
         }
-    } catch (error) {
-        console.error(error);
+    }
+    catch (error) {
+        console.log(error);
     }
 }
 
 // Fetch 4-day future forecast data
 async function getForecastData() {
-    try {
+    try{
         const response = await fetch(forecastURL);
         if (response.ok) {
             const data = await response.json();
-            const dailyForecast = [];
-
-            // Get the forecast for the 4 upcoming days
-            for (let i = 0; i < 4; i++) {
-                const forecastIndex = i * 8; // Each day has 8 data points
-                const forecastDate = new Date(data.list[forecastIndex].dt * 1000).toDateString();
-                const forecastTemperatures = data.list.slice(forecastIndex, forecastIndex + 8).map(entry => entry.main.temp);
-          
-                const highTemp = Math.max(...forecastTemperatures);
-                const lowTemp = Math.min(...forecastTemperatures);
-
-                dailyForecast.push({ date: forecastDate, highTemp, lowTemp });
-            }
-
-            // Display future forecast in the HTML card
-            const forecastContainer = document.getElementById("forecastContainer");
-            dailyForecast.forEach(forecast => {
-                const forecastItem = document.createElement("div");
-                forecastItem.innerHTML = `${forecast.date}: High ${forecast.highTemp}° F, Low ${forecast.lowTemp}° F`;
-                forecastContainer.appendChild(forecastItem);
-            });
-        } else {
-            throw Error(await response.text());
+            displayForecastWeather(data);
         }
-    } catch (error) {
-        console.error(error);
+    else {
+        throw Error(await response.text);
+    }
+    }
+    catch (error) {
+        consol.log(error);
     }
 }
+    
+function displayCurrentWeather(data) {
+    currentTemp.innerHTML = '${data.main.temp}° F';
+    icon.setAttribute("src", 'https://openweathermap.org/img/wn/${data.weather[0].icon}.png');
+    weatherDescription.innerHTML = data.weather[0].description;
+}
 
-// Fetch current weather data and future forecast data, then display in the HTML
-getCurrentWeatherData();
-getForecastData();
+function displayForecastWeather(data) {
+    data.list.forEach(entry => {
+        const unixDT = entry.dt;
+        const milliseconds = unixDT * 1000;
+        const dateObject = new Date(milliseconds);
+        const weekday = dateObject.toLocaleString("en-US", {weekday: "short"});
+        const month = dateObject.toLocaleString("en-US", {month: "short"});
+        const day = dateObject.toLocaleString("en-US", {day: "numeric"});
+        const year = dateObject.toLocaleString("en-US", {year: "numeric"});
+        const hour = dateObject.toLocaleString("en-US", {hour: "numeric"});
+        
+        if (weekday !== todayWeekday) {
+            const checkDay = weekday;
+            
+            if (hour == "2 PM") {
+                const forecastHigh = entry.main.temp_max;
+                const date = document.createElement("span");
+                date.innerHTML = '${weekday}, ${month} ${day}, ${year}:'
+                const high = document.createElement("p");
+                high.InnerHTML = '${forecastHigh}° F';
+                
+                forecast.appendChild(date)
+                forecast.appendChild(high);
+            }
+        }
+    });
+}
 
 getCurrentWeatherData();
 getForecastWeatherData();

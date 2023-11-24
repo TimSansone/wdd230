@@ -135,47 +135,6 @@ footer {
     height: 5px;
 }
 
-#popup a{
-	color: #1a0f7c;
-	font-family: 'PT Sans', sans-serif;
-}
-
-#popup button{
-	padding: 5px;
-}
-
-.shown, #popup{
-	background-color: #ACCE22;
-	color: rgba(0,0,0,.9);
-	font-size: 1.2rem;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	text-align: center;
-	padding: 10px;
-	max-width: 500px;
-	position: fixed;
-	bottom: 30px;	
-}
-
-.hidden{
-	display: none;
-}
-
-.shown, #popup{
-	background-color: #ACCE22;
-	color: rgba(0,0,0,.9);
-	font-size: 1.2rem;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	text-align: center;
-	padding: 10px;
-	max-width: 500px;
-	position: fixed;
-	bottom: 30px;	
-}
-
-.hidden{
-	display: none;
-}
-
 /* Dark mode toggle switch styles */
 .dark-mode-toggle {
     position: fixed;
@@ -227,43 +186,76 @@ body.dark-mode {
     color: #fff;
 }
 
-/* Weather card styles */
-.weather-container {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 300px;
-}
+/* Weather Section */
+    #weather{
+        margin: 1em;
+        padding: 2em;
+        background-color: #C8BFBC;
+        border-radius: 10px;
+        font-size: 90%;
+    }
 
-.weather-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-}
+    #weather h2{
+        font-size: 110%;
+    }
 
-.weather-icon img {
-    max-width: 50px;
-    height: auto;
-}
+    /* Current Weather Section */
+    .currentWeather {
+        text-align: center;
+    }
 
-.weather-description {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
+    .currentWeather p{
+        font-size: 90%;
+        font-family: var(--text-font);
+        font-weight: 600;
+    }
 
-.temperature {
-    font-size: 1.5rem;
-}
+    .currentWeather span{
+        font-size: 90%;
+        font-family: var(--text-font);
+    }
+
+    .currentWeather img{
+        width: 6rem;
+        height: auto;
+        margin-top: -10px;
+    }
+
+    #weather h2{
+        font-family: var(--header-font);
+        color: var(--dark-text-stable);
+        text-align: center;
+    }
+
+    .futureForecast p{
+        /* Temperatures */
+        font-family: var(--text-font);
+        color: var(--dark-text-stable);
+        font-size: 90%;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .futureForecast span {
+        /* Date */
+        font-size: 85%;
+        font-weight: 600;
+        color: var(--dark-text-stable);
+    }
+
+    #weatherDesc {
+        color: var(--dark-text-stable);
+    }
 
 .flex-1 {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .flex-2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     margin: 0 auto;
 }
@@ -281,7 +273,7 @@ body.dark-mode {
             border: none;
         }
         .meetandgreet {
-            position: fixed;
+            position: absolute;
             left: 10px;
             display: flex;
             justify-content: space-evenly;
@@ -389,7 +381,6 @@ nav a{
 .photoContainer {
     float: right; /* Float the photoContainer to the right */
     width: 30%; /* Adjust the width as per your design */
-    margin-left: 10px; /* Add a gap between the sidebar and photoContainer */
 }
 
 .photoContainer h3{
@@ -408,18 +399,15 @@ nav a{
 }
 
 .sidePhoto {
-    position: relative;
     padding: 2rem;
 }
 
 
 .picture-label {
-    position: absolute;
-    left: 20px;
+    left: 10px;
     top: 10px;
     background-color: var(--secondary-color);
     color: var(--dark-text);
-    padding: .8rem;
 }
 
 /* Style for the last-visit-message */
@@ -431,19 +419,18 @@ nav a{
 /* Style for the demographics section */
 #demographics {
     margin-bottom: 20px; /* Add a margin at the bottom to create space */
-    padding-bottom: 2rem;
+    padding-right: 10em;
 }
 
 /* Style for the statistics section */
 #statistics {
     margin-bottom: 20px; /* Add a margin at the bottom to create space */
-    padding-bottom: 2rem;
 }
 
 /* Style for the Events section */
 #Events {
     margin-bottom: 20px; /* Add a margin at the bottom to create space */
-    padding-bottom: 2rem;
+    padding-bottom: 10rem;
 }
 
 * {

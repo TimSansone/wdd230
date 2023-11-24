@@ -18,7 +18,6 @@ async function getCurrentWeatherData() {
         const response = await fetch(currentURL);
         if (response.ok){
             const data = await response.json();
-            console.table(data);
             displayCurrentWeather(data);
         }
         else {
@@ -35,7 +34,6 @@ async function getForecastWeatherData() {
         const response = await fetch(forecastURL);
         if (response.ok){
             const data = await response.json();
-            console.table(data);
             displayForecastWeather(data);
         }
         else {
@@ -49,7 +47,6 @@ async function getForecastWeatherData() {
 
 function displayCurrentWeather(data) {
     currentTemp.innerHTML = `${data.main.temp}° F`;
-    console.log(data.weather[0].description);
     icon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
     weatherDescription.innerHTML = data.weather[0].description;
 }
@@ -61,8 +58,8 @@ function displayForecastWeather(data) {
         const unixDT = entry.dt;
         const milliseconds = unixDT * 1000;
         const dateObject = new Date(milliseconds);
-        const weekday = dateObject.toLocaleString("en-US", {weekday: "long"}); 
-        const month = dateObject.toLocaleString("en-US", {month: "long"}); 
+        const weekday = dateObject.toLocaleString("en-US", {weekday: "short"}); 
+        const month = dateObject.toLocaleString("en-US", {month: "short"}); 
         const day = dateObject.toLocaleString("en-US", {day: "numeric"});
         const year = dateObject.toLocaleString("en-US", {year: "numeric"});
         const hour = dateObject.toLocaleString("en-US", {hour: "numeric"});
@@ -79,8 +76,8 @@ function displayForecastWeather(data) {
 
                 forecast.appendChild(date)
                 forecast.appendChild(high);
-    }
-}
+                }
+        }
 
     });
 }

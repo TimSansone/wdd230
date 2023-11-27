@@ -2,151 +2,164 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orlando Chamber of Commerce</title>
-    <meta name="description" content="The site for Orlando Ciy Chamber, 
-    providing information for local businesses, local events, Membership
-    benefits, and fun things to do.">
-    <meta name="author" content="Timothy Sansone">
-    <link rel ="icon" href="images/favicon.ico.svg">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/smaller.css">
-    <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="Website for Orlando Florida Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/orlando_florida.jpg">
-    <meta property="og:url" content="https://timsansone.github.io/wdd230/chamber/index.html">
+    <title>Orlando Florida Chamber of Commerce</title>
+
+    <link rel="icon" href="./images/favicon.ico.svg">
+
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/medium.css">
+    <link rel="stylesheet" href="./styles/large.css">
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/windchill.js"></script>
+    <script src="./scripts/spotlight.js"></script>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/hamburger-menu.js"></script>
+    <script src="./scripts/lastvisit.js"></script>
+    <script src="./scripts/lazyload.js"></script>
+    <script defer src="./scripts/darkmode.js"></script>
 </head>
 <body>
+    
     <header>
-        <h1>Orlando Florida Chamber of Commerce</h1>
+
+        <div id="header-content">
+            <div id="logo-section">
+                <img src="./images/orlando_florida-750.webp" alt="logo" id="header-logo">
+                <section id="name-section">
+                    <h1>Orlando</h1>
+                    <h2>Chamber of Commerce</h2>
+                </section>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li class="nav-item"><a id="menu" href="#"></a></li>
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="./discovery.html">Discover</a></li>
+                    <li class="nav-item"><a href="./directory.html">Directory</a></li>
+                    <li class="nav-item"><a href="./join.html">Join</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="social-div">
+                <img src="./images/facebook_icon.png" alt="facebook" class="social">
+                <img src="./images/instagram_logo.png" alt="linkedin" class="social">
+                <img src="./images/twitter_x_logo.png" alt="twitterx-x" class="social">
+            </div>
+            <div id="date-section">
+                <p>Generic date</p>
+            </div>
+        </div>
+
     </header>
-    <nav>
-        <button id="navButton"></button>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class = "banner-image">
-        <picture>
-            <source srcset="images/orlando_florida-750.webp" media="(max-width: 750px)">
-            <source srcset="images/orlando_florida-500.webp" media="(max-width: 500px)">
-            <img src="images/orlando_florida-1500.webp" alt="Lake Eola" width="1250" height="625" loading="lazy">
-        </picture>
-    </div>
-    <main>
-        <div class="meetandgreet">
-            <button id="mgClose"></button>
-        </div>
-        <div class="flex-1">
-            <div id="mission-statement">
-                <p>Welcome to the Orlando Chamber of Commerce website. We are dedicated to driving economic prosperity, enhancing the quality of life, and promoting a business-friendly environment. Join us on this journey of growth and discovery – where the possibilities are as endless as the Florida horizon. Welcome to Orlando, where business meets opportunity!</p>
+
+    <main id="home-main">
+
+        <section id="hero-section" class="home-section">
+            <picture>
+                <source media="(min-width: 35em) and (max-width: 1000px)" src="./images/orlando_florida-750.webp">
+                <source media="(min-width: 1000px)" src="./images/orlando_florida-1500.webp">
+                <img src="./images/orlando_florida-500.webp" alt="city image">
+            </picture>
+            
+            <button><a href="./join.html">Join the Chamber</a></button>
+        </section>
+
+        <section id="event-section" class="home-section">
+            <h2>Ribbon Cutting</h2>
+            <h3>🎭 Melbourne Civic Theater</h3>
+            <p>Join us for the grand opening of our brand new local theater, Friday at 2:00. <span>more info...</span></p>
+        </section>
+
+        <section id="weather-section" class="home-section">
+            <h2>Weather</h2>
+            <div id="temperature-div">
+                <img src="weather-icon" alt="weatherIcon">
+                <span id="temperature"></span>
             </div>
-        </div>
-        <br>
-        
-        <div id="flex-2">
-                <div id="weather">
-                    <div class="currentWeather">
-                        <h2>Orlando Weather</h2>
-                        <p>Current Weather: </p>
-                        <span id="currentTemp"></span>
-                        <span id="weatherDesc"></span>
-                        <br>
-                        <img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
-                    </div>
-                <div class="futureForecast">
-                    <h4>Upcoming High Temperatures</h4>
-                </div>
+            <div id="weather-status"><h3></h3></div>
+            <hr>
+            <div id="weather-data">
+                <section id="wind-speed">
+                    <h4>Wind Speed: </h4><span></span>
+                </section>
+                <section id="wind-chill">
+                    <h4>Wind Chill: </h4><span></span>
+                </section>
             </div>
-        </div>
-        <br>
-        <div class="flex-2">
-            <section id="general-information">
-                <h2>Current Events</h2>
-                <br>
-                <p>Orlando is a regional events capital, with hundreds of cultural, music and sports events happening throughout the year. Click on the link below to get more information.</p>
-                <a href="https://www.orlando.gov/Events">Orlando Events</a>
-                <br>
-                <h2>Community Calendar</h2>
-                <br>
-                <p>Community Calendar</p>
-                <br>
-            </section>
+        </section>
+
+        <section id="news-section" class="home-section">
+            <h2>News Release</h2>
+            <p>In a bizarre incident that left the residents of Orlando in shock, a group of monkeys escaped from the local zoo and took over a popular fast-food chain. The primates, who were reportedly fed up with their diet of bananas and peanuts, stormed into the restaurant and demanded to be served burgers and fries. The staff, who were too scared to refuse, complied with their demands and watched in amazement as the monkeys devoured their meals with gusto.</p>
+
+            <p>The situation quickly spiraled out of control when the monkeys, emboldened by their newfound freedom, began to wreak havoc in the restaurant. They climbed onto the tables, threw food at each other, and even started a food fight. The police were called to the scene, but they were unable to contain the situation as the monkeys had barricaded themselves inside the restaurant.</p>
+            
+            <p>After several hours of negotiations, the police were finally able to coax the monkeys out of the restaurant with the promise of a lifetime supply of burgers and fries. The monkeys, who had clearly developed a taste for fast food, were last seen heading towards the nearest McDonald’s.</p>
+            
+            <p>While the incident was certainly amusing, it serves as a reminder that we should always treat animals with respect and kindness. Let’s hope the monkeys are now living their best lives, free from the confines of their cages.</p>
+        </section>
+
+        <div id="spotlight-section" class="home-section">
+            
+            <div id="spotlight-container">
+                <section class="spotlight home-section">
+                    <a href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen">
+                        <img src="images/newspaper.jpg" href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen" alt="Latest Orlando News"></a>Latest Orlando News
+                    
+
+                </section>
+    
+                <section class="spotlight home-section">
+                    <a href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF">
+                        <img src="images/upcoming-events.jpg" href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF" alt="Upcoming Events"></a>Upcoming Events
+                    
+
+                </section>
+
             </div>
 
-    <br>
-    <section id="local-information">
-            <div class="card">
-                <h2>Free Thing To Do</h2>
-                <br>
-                <h4>Disney Springs</h4>
-                <p>Free admission, covered parking, and dozens of places to shop and eat. Enjoy remarkable architecture, natural beauty, and free family fun that includes live performances and other entertaining interludes.</p>
-                <p>Address: 1486 Buena Vista Drive, Lake Buena Vista, FL 32830</p>
-                <p>Hours of operation: 10:00am - 11:00pm</p>
-            </div>
-        <div class="card">
-            <h2>Another Fun Free Thing To Do</h2>
-            <br>
-            <h4>West Orange Trail</h4>
-            <p>Enjoy 22.26 miles of paved Trail from the Orange/Lake County line, the town of Killarney and Oakland, the city of Winter Garden, across U.S. 441, through downtown Apopka to Welch Road. Don't forget to stop and enjoy the butterfly garden at the Tildenville outpost!</p>
-            <p>Address: 501 Crown Point Cross Rd., Winter Garden, FL 34787</p>
-            <p>Hours: Sunrise to Sunset</p>
         </div>
-        <div class="card">
-            <h2>Local Business</h2>
-            <br>
-            <p>Info for new residents</p>
-            <p>This is where I will place some local businesses
-                information</p>
-            <p>Local Business #3</p>
-            <p>Descrition</p>
-            <p>Phone:</p>
-            <p>Email:</p>
+
+        <div id="join-section" class="home-section">
+            <button><a href="./join.html">Join Us!</a></button>
+            <p>Discover how to join the chamber of commerce and how it will benefit your organization!</p>
         </div>
-        <br>
-        <div class="card">
-	        <span class="label">Number of Visits: </span>
-                <br><br>
-                <span class="visits"></span>
-        </div>
-    </section>
+
     </main>
+
     <footer>
-        <div class ="social">
-            <a href="#" target = "_blank">
-                <img class = "badge" src = "images/facebook_icon.png"
-                alt="facebook">
-            </a>
-            <a href = "#" target = "_blank">
-                <img class = "badge" src = "images/instagram_logo.png"
-                alt = "instagram">
-            </a>
-            <a href="#" target = "_blank">
-                <img class = "badge" src = "images/twitter_x_logo.png"
-                alt="twitterx">
-            </a>
+
+        <div id="footer-content">
+
+            <div id="footer-top-content">
+                <img src="./images/orlando_florida-750.webp" alt="logo" id="footer-logo">
+                <h4>Orlando Chamber of Commerce</h4>
+                <p>200 S Orange Ave Suite 200</p>
+                <p>Orlando, Florida 32801</p>
+                <p>info@occ.com</p>
+                <p>(407) 835-2454</p>
+            </div>
+
+            <hr>
+
+            <div id="footer-bottom-content">
+                <div id="info">
+                    <p>© Orlando Chamber</p>
+                    <p><strong>Timothy Sansone</strong></p>
+                    <p>WDD 230 Project</p>
+                </div>
+                <p id="lastModified"></p>
+            </div>
         </div>
-        <p>&copy; 2023 Timothy Sansone</p>
-        <p>Contact: san21048@byui.edu</p>
-        
+
     </footer>
     <div class="dark-mode-toggle">
         <input type="checkbox" id="dark-mode-checkbox">
         <label for="dark-mode-checkbox"></label>
     </div>
-    <script src="scripts/banner.js"></script>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/hamburger-menu.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/darkmode.js"></script>
-    <script src="scripts/visitcounter.js"></script>
+
 </body>
 </html>

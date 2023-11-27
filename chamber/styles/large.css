@@ -1,3 +1,5 @@
+@media (min-width: 1000px) {
+
     #home-main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -606,3 +608,4 @@ body.dark-mode {
     font-family: var(--text-font);
     font-size: 1rem;
     font-weight: 400;
+}

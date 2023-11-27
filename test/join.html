@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/hamburger-menu.js"></script>
+    <script src="./scripts/lastvisit.js"></script>
+    <script src="./scripts/darkmode.js"></script>
+    
+</head>
+<body>
+
+    <header>
+
+        <div id="header-content">
+            <div id="logo-section">
+                <img src="./images/orlando_florida-750.webp" alt="logo" id="header-logo">
+                <section id="name-section">
+                    <h1>Orlando</h1>
+                    <h2>Chamber of Commerce</h2>
+                </section>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li class="nav-item"><a id="menu" href="#"></a></li>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="discovery.html">Discover</a></li>
+                    <li class="nav-item"><a href="directory.html">Directory</a></li>
+                    <li class="nav-item"><a href="join.html">Join</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="social-div">
+                <img src="./images/facebook_icon.png" alt="facebook" class="social">
+                <img src="./images/instagram_logo.png" alt="linkedin" class="social">
+                <img src="./images/twitter_x_logo.png" alt="linkedin" class="social">
+            </div>
+            <div id="date-section">
+                <p>Generic date</p>
+            </div>
+        </div>
+
+    </header>
+
+    <main id="main-join">
+        <div id="div-join">
+            <form action="thankyou.html" name="my-form" method="get">
+                <section class="form-box">
+                    <label for="first">First *</label>
+                    <input type="text" id="first" name="first" placeholder="First Name" required>
+                </section>
+                <section class="form-box">
+                    <label for="last">Last *</label>
+                    <input type="text" id="last" name="last" placeholder="Last Name" required>
+                </section>
+                <section class="form-box">
+                    <label for="position">Position</label>
+                    <input type="text" id="position" name="position" placeholder="Busines Position"
+                        pattern="[- A-Za-z]{7,}">
+                    <!--only accepts alpha charachers, hyphens, and spaces, minimun of seven characters using regular expression pattern-->
+                </section>
+                <section class="form-box">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
+                </section>
+                <section class="form-box">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" name="phone" id="phone" placeholder="___-___-____" required>
+                </section>
+                <section class="form-box">
+                    <label for="busines">Business *</label>
+                    <input type="text" id="business" name="business" placeholder="Business Name">
+                </section>
+                <section class="form-box">
+                    <label for="membership">Membership Level</label>
+                    <select name="membership" id="membership">
+                        <option value="select">-Select-</option>
+                        <option value="NP">Non Profit</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </section>
+                <section class="form-box">
+                    <label for="description">Busines Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10"
+                        placeholder="Type here..."></textarea>
+                    <section class="form-box">
+                        <input type="hidden" id="datetime" name="datetime" value="0">
+                    </section>
+                    <!--hidden field that contains the current date and time that the form was loaded by the user-->
+                </section>
+                <section class="form-box">
+                    <button id="btnSend">Send</button>
+                </section>
+            </form>
+        </div>
+        <div id="memberships">
+            <h3>Membership Levels</h3>
+            <P>Non-Profit ($50/month): Access to networking events and business educational programs. Inclusion in the chamber's online directory. Opportunity to participate in community service initiatives. Access to discounted advertising and sponsorships.</P>
+            <br>
+            <P>Bronze ($100/month): All non-profit membership benefits. Enhanced visibility through a featured listing in the chamber's directory. Opportunity to promote business events through the chamber's communication channels. Access to chamber's resources and market research.</P>
+            <br>
+            <P>Silver Membership ($200/month): All bronze membership benefits. Exclusive networking opportunities with prominent business leaders. Recognition at chamber events and in promotional materials. Access to professional development workshops and seminars.</P>
+            <br>
+            <P>Gold Membership ($300/month): All silver membership benefits. Premier visibility and promotion as a top-tier member. Priority access to high-profile chamber events and speaking engagements. Personalized business support and introductions to key stakeholders.</P>
+            </div>
+            <div id="visit-us">
+                <h2>Visit us</h2>
+                <p>You can come visit us at 200 S. Orange Ave, Suite 200, Orlando, FL 32801</p>
+                <p>Our office hours are Monday through Friday from 8:00am to 12:00pm and 2:00pm to 5:00pm</p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112222.13767755243!2d-81.4250659524278!3d28.481299255462513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1701080615393!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+    </main>
+
+    <footer>
+
+        <div id="footer-content">
+
+            <div id="footer-top-content">
+                <img src="./images/orlando_florida-750.webp" alt="logo" id="footer-logo">
+                <h4>Orlando Chamber of Commerce</h4>
+                <p>200 S Orange Ave Suite 200</p>
+                <p>Orlando, Florida 32801</p>
+                <p>info@occ.com</p>
+                <p>(407) 835-2454</p>
+            </div>
+
+            <hr>
+
+            <div id="footer-bottom-content">
+                <div id="info">
+                    <p>© Orlando Chamber</p>
+                    <p><strong>Timothy Sansone</strong></p>
+                    <p>WDD 230 Project</p>
+                </div>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

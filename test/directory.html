@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/directory.js"></script>
+    <script src="./scripts/hamburger-menu.js"></script>
+</head>
+<body>
+    
+    <header>
+
+        <div id="header-content">
+            <div id="logo-section">
+                <img src="./images/orlando_florida-500.webp" alt="logo" id="header-logo">
+                <section id="name-section">
+                    <h1>Orlando</h1>
+                    <h2>Chamber of Commerce</h2>
+                </section>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li class="nav-item"><a id="menu" href="#"></a></li>
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="./discovery.html">Discover</a></li>
+                    <li class="nav-item"><a href="./directory.html">Directory</a></li>
+                    <li class="nav-item"><a href="./join.html">Join</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="social-div">
+                <img src="./images/facebook_icon.png" alt="facebook" class="social">
+                <img src="./images/instagram_logo.png" alt="linkedin" class="social">
+                <img src="./images/twitter_x_logo.png" alt="linkedin" class="social">
+            </div>
+            <div id="date-section">
+                <p>Generic date</p>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="directoryMain">
+        <h2>Business Directory</h2>
+        <div class="optionButtons">
+            <button id="gridButton" aria-label="grid button">Grid View</button>
+            <button id="listButton" aria-label="list button">List View</button>
+        </div>
+        <article class="busGrid" id="busCards"></article>
+    </main>
+
+    <footer>
+
+        <div id="footer-content">
+
+            <div id="footer-top-content">
+                <img src="./images/orlando_florida-750.webp" alt="logo" id="footer-logo">
+                <h4>Orlando Chamber of Commerce</h4>
+                <p>200 S Orange Ave Suite 200</p>
+                <p>Orlando, Florida 32801</p>
+                <p>info@occ.com</p>
+                <p>(407) 835-2454</p>
+            </div>
+
+            <hr>
+
+            <div id="footer-bottom-content">
+                <div id="info">
+                    <p>© Orlando Chamber</p>
+                    <p><strong>Timothy Sansone</strong></p>
+                    <p>WDD 230 Project</p>
+                </div>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

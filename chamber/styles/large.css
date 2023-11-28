@@ -50,6 +50,17 @@
         place-items: center;
     }
 
+#join-button {
+    min-width: 44px;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    background-color: #e5dedb;
+    color: #11202C;;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #03263994;
+    
+}
+
     #logo-section {
         grid-row: 1;
         grid-column: 1;

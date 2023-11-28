@@ -54,33 +54,33 @@
     <main id="main-join">
         <div id="div-join">
             <form action="thankyou.html" name="my-form" method="get">
-                <section class="form-box">
+                <div class="form-box">
                     <label for="first">First *</label>
                     <input type="text" id="first" name="first" placeholder="First Name" required>
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="last">Last *</label>
                     <input type="text" id="last" name="last" placeholder="Last Name" required>
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="position">Position</label>
                     <input type="text" id="position" name="position" placeholder="Busines Position"
                         pattern="[- A-Za-z]{7,}">
                     <!--only accepts alpha charachers, hyphens, and spaces, minimun of seven characters using regular expression pattern-->
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="phone">Phone *</label>
                     <input type="tel" name="phone" id="phone" placeholder="___-___-____" required>
-                </section>
-                <section class="form-box">
-                    <label for="busines">Business *</label>
+                </div>
+                <div class="form-box">
+                    <label for="business">Business *</label>
                     <input type="text" id="business" name="business" placeholder="Business Name">
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="membership">Membership Level</label>
                     <select name="membership" id="membership">
                         <option value="select">-Select-</option>
@@ -89,19 +89,18 @@
                         <option value="silver">Silver</option>
                         <option value="gold">Gold</option>
                     </select>
-                </section>
-                <section class="form-box">
+                </div>
+                <div class="form-box">
                     <label for="description">Busines Description</label>
                     <textarea name="description" id="description" cols="30" rows="10"
                         placeholder="Type here..."></textarea>
-                    <section class="form-box">
+                    <div class="form-box">
                         <input type="hidden" id="datetime" name="datetime" value="0">
-                    </section>
+                    </div>
                     <!--hidden field that contains the current date and time that the form was loaded by the user-->
-                </section>
-                <section class="form-box">
+                <div class="form-box">
                     <button id="btnSend">Send</button>
-                </section>
+                </div>
             </form>
         </div>
         <div id="memberships">

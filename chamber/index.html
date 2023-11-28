@@ -40,10 +40,10 @@
                 </ul>
             </nav>
             <div id="social-div">
-                <a href="https://www.facebook.com/cityoforlando/" target=_blank">
+                <a href="https://www.facebook.com/cityoforlando/" target="_blank">
                 <img src="./images/facebook_icon.png" alt="facebook" class="social">
                 </a>
-                <a href="https://www.instagram.com/thecitybeautiful/?hl=en" target=_blank">
+                <a href="https://www.instagram.com/thecitybeautiful/?hl=en" target="_blank">
                 <img src="./images/instagram_logo.png" alt="linkedin" class="social">
                 </a>
                 <a href="https://twitter.com/citybeautiful?lang=en" target="_blank">
@@ -56,21 +56,19 @@
         </div>
 
     </header>
-     <div class="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-checkbox">
-        <label for="dark-mode-checkbox"></label>
-    </div>
 
     <main id="home-main">
 
         <section id="hero-section" class="home-section">
             <picture>
-                <source media="(min-width: 35em) and (max-width: 1000px)" src="./images/orlando_florida-750.webp">
-                <source media="(min-width: 1000px)" src="./images/orlando_florida-1500.webp">
+                <source media="(min-width: 35em) and (max-width: 1000px)" srcset="./images/orlando_florida-750.webp">
+                <source media="(min-width: 1000px)" srcset="./images/orlando_florida-1500.webp">
                 <img src="./images/orlando_florida-500.webp" alt="city image">
             </picture>
             
-            <button><a href="./join.html">Join the Chamber</a></button>
+            <button>
+                <a href="./join.html">Join the Chamber</a>
+            </button>
         </section>
 
         <section id="event-section" class="home-section">
@@ -85,7 +83,7 @@
                 <img src="weather-icon" alt="weatherIcon">
                 <span id="temperature"></span>
             </div>
-            <div id="weather-status"><h3></h3></div>
+            <div id="weather-status"></div>
             <hr>
             <div id="weather-data">
                 <section id="wind-speed">
@@ -113,14 +111,14 @@
             <div id="spotlight-container">
                 <section class="spotlight home-section">
                     <a href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen" target="_blank">
-                        <img src="images/newspaper.jpg" href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen" alt="Latest Orlando News"></a>Latest Orlando News
+                        <img srcset="images/newspaper.jpg" href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen" alt="Latest Orlando News"></a>Latest Orlando News
                     
 
                 </section>
     
                 <section class="spotlight home-section">
                     <a href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF" target="_blank">
-                        <img src="images/upcoming-events.jpg" href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF" alt="Upcoming Events"></a>Upcoming Events
+                        <img srcset="images/upcoming-events.jpg" href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF" alt="Upcoming Events"></a>Upcoming Events
                     
 
                 </section>
@@ -130,7 +128,9 @@
         </div>
 
         <div id="join-section" class="home-section">
-            <button><a href="./join.html">Join Us!</a></button>
+            <button>
+                <a href="./join.html">Join Us!</a>
+            </button>
             <p>Discover how to join the chamber of commerce and how it will benefit your organization!</p>
         </div>
 

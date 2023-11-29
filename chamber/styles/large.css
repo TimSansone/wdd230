@@ -330,6 +330,68 @@ body.dark-mode {
     margin-bottom: 1px;
 }
 
+	/* Weather Section */
+    #weather{
+        margin: 1em;
+        padding: 2em;
+        background-color: #C8BFBC;
+        border-radius: 10px;
+        font-size: 90%;
+    }
+
+    #weather h2{
+        font-size: 110%;
+    }
+
+    /* Current Weather Section */
+    .currentWeather {
+        text-align: center;
+    }
+
+    .currentWeather p{
+        font-size: 90%;
+        font-family: var(--text-font);
+        font-weight: 600;
+    }
+
+    .currentWeather span{
+        font-size: 90%;
+        font-family: var(--text-font);
+    }
+
+    .currentWeather img{
+        width: 6rem;
+        height: auto;
+        margin-top: -10px;
+    }
+
+    #weather h2{
+        font-family: var(--header-font);
+        color: var(--dark-text-stable);
+        text-align: center;
+    }
+
+    #futureForecast p{
+        /* Temperatures */
+        font-family: var(--text-font);
+        color: var(--dark-text-stable);
+        font-size: 90%;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    #futureForecast span {
+        /* Date */
+        font-size: 85%;
+        font-weight: 600;
+        color: var(--dark-text-stable);
+    }
+
+    #futureForecast p
+
+    #weatherDesc {
+        color: var(--dark-text-stable);
+    }
 
 /* Button Section */
 

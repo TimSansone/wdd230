@@ -1,173 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orlando Florida Chamber of Commerce</title>
-    <meta name="description" content="The official Orlando, Florida Chamber of Commerce Website, where you can find local information, news, events, membership information, weather, and more!">
-    <meta name="author" content="Timothy Sansone">
-    <meta property="og:title" content="The official site for the Orlando Chamber of Commerce" >
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.orlando.gov/files/sharedassets/public/v/2/departments/parks-amp-rec/lake-eola/lakeeolaheadernov2018.png?dimension=pageimagefullwidth&w=890">
-    <meta property="og:url" content="https://timsansone.github.io/wdd230/chamber/index.html" >
-    <link rel="icon" href="./images/favicon.ico.svg">
-    <link rel="stylesheet" href="./styles/small.css">
-    <link rel="stylesheet" href="./styles/medium.css">
-    <link rel="stylesheet" href="./styles/large.css">
+const currentTemp = document.querySelector("#temperature");
+const weatherIcon = document.querySelector(".weather-icon");
+const weatherDesc = document.querySelector("#weather-info");
+const windSpeed = document.querySelector("#wind-speed");
+const windChill = document.querySelector("#windchill");
+const forecastCont = document.querySelector(".forecast-inf");
 
-</head>
-<body>
-    
-    <header>
+const url1 = "https://api.openweathermap.org/data/2.5/weather?lat=28.32&lon=-81.22&units=imperial&appid=eaa7d958886dda1b5fd5aa3be2aa0756";
 
-        <div id="header-content">
-            <div id="logo-section">
-                <img src="./images/orlando_florida-750.webp" alt="logo" id="header-logo">
-                <section id="name-section">
-                    <h1>Orlando</h1>
-                    <h2>Chamber of Commerce</h2>
-                </section>
-            </div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li class="nav-item"><a id="menu" href="#"></a></li>
-                    <li class="nav-item"><a href="./index.html">Home</a></li>
-                    <li class="nav-item"><a href="./discover.html">Discover</a></li>
-                    <li class="nav-item"><a href="./directory.html">Directory</a></li>
-                    <li class="nav-item"><a href="./join.html">Join</a></li>
-                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div id="social-div">
-                <a href="https://www.facebook.com/cityoforlando/" target="_blank">
-                <img src="./images/facebook_icon.png" alt="facebook" class="social">
-                </a>
-                <a href="https://www.instagram.com/thecitybeautiful/?hl=en" target="_blank">
-                <img src="./images/instagram_logo.png" alt="linkedin" class="social">
-                </a>
-                <a href="https://twitter.com/citybeautiful?lang=en" target="_blank">
-                <img src="./images/twitter_x_logo.png" alt="twitterx-x" class="social">
-                </a>
-            </div>
-            <div id="date-section">
-                <p>Generic date</p>
-            </div>
-        </div>
+const url2 = "https://api.openweathermap.org/data/2.5/forecast?lat=28.32&lon=-81.22&units=imperial&appid=eaa7d958886dda1b5fd5aa3be2aa0756";
 
-    </header>
+async function apiFetchW(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayWeather(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        alert(error);
+    }
+}
 
-    <main id="home-main">
+async function apiFetchF(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayForecast(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        alert(error);
+    }
+}
 
-        <section id="hero-section" class="home-section">
-            <h2>Lake Eola</h2>
-            <picture>
-                <source media="(min-width: 35em) and (max-width: 1000px)" srcset="./images/orlando_florida-750.webp">
-                <source media="(min-width: 1000px)" srcset="./images/orlando_florida-1500.webp">
-                <img src="./images/orlando_florida-500.webp" alt="city image">
-            </picture>
+function capitalizeString(string) {
+    let words = string.split(" ");
+    let capWord = words
+        .map((word) => {
+        return word[0].toUpperCase() + word.substring(1);
+        })
+        .join(" ");
+    return capWord;
+}
 
-        </section>
+function displayWeather(data) {
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    let temp = data.main.temp;
+    let desc = data.weather[0].description;
+    let capDesc = capitalizeString(desc);
+    let wind = data.wind.speed;
+    currentTemp.innerHTML = `${temp.toFixed(1)}`;
+    weatherDesc.innerHTML = capDesc;
+    weatherIcon.setAttribute("src", iconsrc);
+    weatherIcon.setAttribute("alt", data.weather[0].main);
+    weatherIcon.setAttribute("width", "50");
+    weatherIcon.setAttribute("height", "50");
+    windSpeed.textContent = wind;
+    calculateWindchill(temp.toFixed(0), wind);
+}
 
-        <section id="event-section" class="home-section">
-            <h2>Ribbon Cutting</h2>
-            <h3>🎭 Melbourne Civic Theater</h3>
-            <p>Join us for the grand opening of our brand new local theater, Friday at 2:00. <span>more info...</span></p>
-        </section>
+function calculateWindchill(num1, num2) {
+    if (num1 <= 50 && num2 > 3.0) {
+        let windChillFactor = 35.74 + (0.6215 * num1) - (35.75 * (num2 ** 0.16)) + ((0.4275 * num1) * (num2 ** 0.16));
+        windChill.textContent = windChillFactor.toFixed(2);
+    } else {
+        windChill.textContent = "N/A";
+    }
+}
 
-        <div id="weather-status">
-                <div class="currentWeather">
-                    <h2>Orlando Weather</h2>
-                    <p>Current Weather: </p>
-                    <span id="currentTemp"></span><br>
-                    <span id="weatherDesc"></span>
-                    <br>
-                    <img id="weatherIcon" src="#" alt="weather-icon" width="50" height="50">
-                </div>
-                <section id="futureForecast">
-                    <h4>Upcoming High Temperatures</h4>
-                </section>
-            </div>
-        
-        <section id="news-section" class="home-section">
-            <h2>News Release</h2>
-            <p>In a bizarre incident that left the residents of Orlando in shock, a group of monkeys escaped from the local zoo and took over a popular fast-food chain. The primates, who were reportedly fed up with their diet of bananas and peanuts, stormed into the restaurant and demanded to be served burgers and fries. The staff, who were too scared to refuse, complied with their demands and watched in amazement as the monkeys devoured their meals with gusto.</p>
+function displayForecast(data) {
+    const days = []
+    const dateNow = new Date();
+    const dayNow = dateNow.getDate();
+    let dayRange = 0;
+    let counter = 0;
 
-            <p>The situation quickly spiraled out of control when the monkeys, emboldened by their newfound freedom, began to wreak havoc in the restaurant. They climbed onto the tables, threw food at each other, and even started a food fight. The police were called to the scene, but they were unable to contain the situation as the monkeys had barricaded themselves inside the restaurant.</p>
-            
-            <p>After several hours of negotiations, the police were finally able to coax the monkeys out of the restaurant with the promise of a lifetime supply of burgers and fries. The monkeys, who had clearly developed a taste for fast food, were last seen heading towards the nearest McDonald’s.</p>
-            
-            <p>While the incident was certainly amusing, it serves as a reminder that we should always treat animals with respect and kindness. Let’s hope the monkeys are now living their best lives, free from the confines of their cages.</p>
-        </section>
+    //Gabriel Ferrin Helped with this code
+    data.list.forEach((forecast) => {
+        const futureDate = new Date(forecast.dt * 1000);
+        const nextDay = futureDate.getDate();
+        if(dayNow !== nextDay && dayRange !== nextDay && counter <= 2) {
+            counter++;
+            dayRange = nextDay;
+            days.push(forecast);
+        }
+    });
 
-        <div id="spotlight-section" class="home-section">
-            
-            <div id="spotlight-container">
-                <section class="spotlight home-section">
-                    <h2>Spotlight</h2>
-                    <a href="https://news.google.com/search?q=orlando%20florida&hl=en-US&gl=US&ceid=US%3Aen" target="_blank">
-                    <img src="./images/newspaper.png" alt="Latest Orlando News">Latest Orlando News</a>
+    days.forEach((item) => {
+        const iconsrc = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+        const container = document.createElement("div");
+        const paragraphDate = document.createElement("p");
+        const paragraphTemp = document.createElement("p");
+        const iconWeather = document.createElement("img");
+        const weatherDesc = document.createElement("p");
+        const newDate = new Date(item.dt * 1000);
 
-                    
+        paragraphDate.textContent = newDate.toLocaleString('default', {month: "short", day: "numeric"});
+        paragraphTemp.innerHTML = `${item.main.temp.toFixed(1)}&deg;F`;
+        iconWeather.setAttribute("src", iconsrc);
+        iconWeather.setAttribute("alt", item.weather[0].main);
+        iconWeather.setAttribute("class", "weather-icon");
+        iconWeather.setAttribute("width", "50");
+        iconWeather.setAttribute("height", "50");
+        weatherDesc.textContent = capitalizeString(item.weather[0].description);
 
-                </section>
-    
-                <section class="spotlight home-section">
-                    <h2>Spotlight</h2>
-                    <a href="https://www.bing.com/search?pc=HIBF&q=upcoming+events+orlando%2C+florida&form=HIBFDF" target="_blank">
-                        <img src="./images/upcoming-events.png" alt="Upcoming Events">Upcoming Events</a>
-                    
+        container.append(paragraphDate, paragraphTemp, iconWeather, weatherDesc);
+        forecastCont.append(container);
+    });
+}
 
-                </section>
-
-            </div>
-
-        </div>
-
-        <div id="join-section" class="home-section">
-            <a href="join.html" id="join-button">Join the Chamber</a>
-            <p>Discover how to join the chamber of commerce and how it will benefit your organization!</p>
-        </div>
-
-    </main>
-
-    <footer>
-
-        <div id="footer-content">
-
-            <div id="footer-top-content">
-                <img src="./images/orlando_florida-750.webp" alt="logo" id="footer-logo">
-                <h4>Orlando Chamber of Commerce</h4>
-                <p>200 S Orange Ave Suite 200</p>
-                <p>Orlando, Florida 32801</p>
-                <p>info@occ.com</p>
-                <p>(407) 835-2454</p>
-            </div>
-
-            <hr>
-
-            <div id="footer-bottom-content">
-                <div id="info">
-                    <p>© Orlando Chamber</p>
-                    <p><strong>Timothy Sansone</strong></p>
-                    <p>WDD 230 Project</p>
-                </div>
-                <p id="lastModified"></p>
-            </div>
-        </div>
-
-    </footer>
-    <div class="dark-mode-toggle">
-        <input type="checkbox" id="dark-mode-checkbox">
-        <label for="dark-mode-checkbox"></label>
-    </div>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/spotlight.js"></script>
-    <script src="./scripts/hamburger-menu.js"></script>
-    <script src="./scripts/lastvisit.js"></script>
-    <script src="./scripts/lazyload.js"></script>
-    <script src="./scripts/darkmode.js"></script>
-    <script src="./scripts/weather.js"></script>
-
-</body>
-</html>
+apiFetchW(url1);
+apiFetchF(url2);

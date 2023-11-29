@@ -8,7 +8,7 @@ const dayDay = dayObject.toLocaleString("en-US", {day: "numeric"});
 const dayYear = dayObject.toLocaleString("en-US", {year: "numeric"});
 console.log(dayWeekday);
 
-if (dayWeekday === "Monday" || dayWeekday === "Tuesday" || dayWeekday === "Wednesday"){
+if (dayWeekday === "Monday" || dayWeekday === "Tuesday" || dayWeekday === "Wednesday" || dayWeekday === "Thursday" ){
     const info = document.createElement("p");
     info.setAttribute("id", "mgInfo");
     info.innerHTML = "Join us for our weekly Meet and Greet <br>every Wednesday at 7:00PM!";

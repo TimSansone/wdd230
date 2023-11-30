@@ -331,62 +331,27 @@ body.dark-mode {
 }
 
 	/* Weather Section */
-#weather-info {
-  display: block;
-  text-align: center;
-  width: 12em;
-  height: 20em;
-  background-color:darkolivegreen;
-  border-radius: 0.5rem;
-  border: 1px solid black;
-}
-#weather-info p {
-font-size: 13px;
-padding: 5px;
-}
-#weather-icon{
-  width: 75px;
-  height: 75px;
-  margin-top: 10px;
-  border: none;
+#weather-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
-#weather-info h2 {
-  font-size: 15px;
-padding: 0.5em;
-color:white
-}
-.container {
-  width: 270px;
-  height: 400px;
-  padding: 20px;
-  background-color: #ccc;;
-  text-align: center;
-  border-radius: 0.5rem;
-  border: 1px solid black;
+.weather-icon {
+    filter: brightness(0.9);
 }
 
-.current, .forecast {
-  height: 220px;
+.forecast-inf {
+    display: flex;
+    align-items: flex-start;
+    gap: .7rem;
 }
 
-.forecast-item {
-  display: flex;
-  justify-content:space-between;
-  margin-bottom: 14px;
+.forecast-inf > * {
+    width: 100%;
 }
-#city {
-  color: black;
-}
-.threedayforecast {
-  color: black;
-  margin-bottom: 15px;
-}
-.forecast img {
-  margin-top: 0;
-  border: none;
-}
-
 /* Button Section */
 
 .optionButtons {

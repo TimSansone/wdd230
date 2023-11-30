@@ -1,26 +1,34 @@
-// Function to calculate wind chill
-function calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour) {
-    if (temperatureFahrenheit >= 50 || windSpeedMilesPerHour < 3) {
-        return "N/A";
-    } else {
-        const windChill = 35.74 + 0.6215 * temperatureFahrenheit - 35.75 * Math.pow(windSpeedMilesPerHour, 0.16) + 0.4275 * temperatureFahrenheit * Math.pow(windSpeedMilesPerHour, 0.16);
-        return windChill.toFixed(1); // Round to one decimal place
-    }
-}
+// const tempCelcius = document.querySelector('#temperature').value;
+// const windSpeed = document.querySelector('#wind-speed').value;
 
-// Retrieve temperature and wind speed from the weather.js script
-const temperatureFahrenheit = parseFloat(document.getElementById('temperature').textContent.split(' ')[1].slice(0, -2));
-const windSpeedMilesPerHour = parseFloat(document.getElementById('wind-speed').textContent.split(' ')[2]);
+// // Converts temperature from Celsius to Fahrenheit
+// function toFahrenheit(celsius) { return celsius * 9 / 5 + 32; }
 
-function calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour) {
-    if (temperatureFahrenheit >= 50 || windSpeedMilesPerHour < 3) {
-        document.getElementById('wind-chill').textContent = 'Wind Chill: N/A';
-    } else {
-        const windChill = 35.74 + 0.6215 * temperatureFahrenheit - 35.75 * Math.pow(windSpeedMilesPerHour, 0.16) + 0.4275 * temperatureFahrenheit * Math.pow(windSpeedMilesPerHour, 0.16);
-        document.getElementById('wind-chill').textContent = 'Wind Chill: ${windChill}°F';
-    }
-}
+// /*Converts temperature from Fahrenheit to Celsius*/
+// function toCelsius(fahrenheit) { return (fahrenheit - 32) * 5 / 9; }
 
-// Calculate wind chill and update the HTML element
-/* const windChill = calculateWindChill(temperatureFahrenheit, windSpeedMilesPerHour);
-document.getElementById('wind-chill').textContent = `Wind Chill: ${windChill}°F`; */
+// /**Converts kilometers to miles*/
+// function toMiles(km) { return km / 1.609; }
+
+
+// //  Calculates, if possible, the wind chill
+// function getWindChill(tempF, windSpeedMph) {
+//     // Check values
+//     if(tempF <= 50 && windSpeedMph > 3) {
+//         // Calculate wind chill
+//         return 35.74 + 0.6215 * tempF- 35.75 * Math.pow(windSpeedMph, 0.16) + 0.4275 * tempF * Math.pow(windSpeedMph, 0.16);
+//     }
+//     else { return NaN; }
+// }
+
+//     // Get temperature value
+//     const tempF = toFahrenheit(tempCelcius);
+//     // Get wind speed value
+//     const windSpeedMph = toMiles(windSpeed);
+//     // Calculate wind chill value
+//     const windChill = getWindChill(tempF, windSpeedMph);
+//     // Set value
+//     document.querySelector("#wind-chill span").textContent = isNaN(windChill)? "N/A" : `${toCelsius(windChill).toFixed(1)} °C`;
+
+// console.log(tempF)
+  

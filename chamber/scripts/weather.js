@@ -27,8 +27,8 @@ export async function getWeatherData() {
 
         descriptionElement.innerText = `Status: ${data.weather[0].description}`;
         cityElement.textContent = city;
-        temperatureElement.textContent = `${temperature} °C`;
-        windChillElement.textContent = `Chill: ${windChillIndex.toFixed(2)} °C`;
+        temperatureElement.textContent = `${temperature} °F`;
+        windChillElement.textContent = `Chill: ${windChillIndex.toFixed(2)} °F`;
         humidityElement.textContent = `Report: ${humidity}%`;
 
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
@@ -63,9 +63,9 @@ export async function getWeatherForecast() {
         const day2Element = document.getElementById('day2');
         const day3Element = document.getElementById('day3');
 
-        day1Element.textContent = `Tomorrow: ${day1.main.temp} °C`;
-        day2Element.textContent = `Next Day: ${day2.main.temp} °C`;
-        day3Element.textContent = `Other Day: ${day3.main.temp} °C`;
+        day1Element.textContent = `Tomorrow: ${day1.main.temp} °F`;
+        day2Element.textContent = `Next Day: ${day2.main.temp} °F`;
+        day3Element.textContent = `Other Day: ${day3.main.temp} °F`;
     } catch (error) {
         console.error('Error fetching weather forecast: ', error);
     }

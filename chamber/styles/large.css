@@ -331,67 +331,61 @@ body.dark-mode {
 }
 
 	/* Weather Section */
-    #weather{
-        margin: 1em;
-        padding: 2em;
-        background-color: #C8BFBC;
-        border-radius: 10px;
-        font-size: 90%;
-    }
+#weather-info {
+  display: block;
+  text-align: center;
+  width: 12em;
+  height: 20em;
+  background-color:darkolivegreen;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
+#weather-info p {
+font-size: 13px;
+padding: 5px;
+}
+#weather-icon{
+  width: 75px;
+  height: 75px;
+  margin-top: 10px;
+  border: none;
+}
 
-    #weather h2{
-        font-size: 110%;
-    }
+#weather-info h2 {
+  font-size: 15px;
+padding: 0.5em;
+color:white
+}
+.container {
+  width: 270px;
+  height: 400px;
+  padding: 20px;
+  background-color: #ccc;;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+}
 
-    /* Current Weather Section */
-    .currentWeather {
-        text-align: center;
-    }
+.current, .forecast {
+  height: 220px;
+}
 
-    .currentWeather p{
-        font-size: 90%;
-        font-family: var(--text-font);
-        font-weight: 600;
-    }
-
-    .currentWeather span{
-        font-size: 90%;
-        font-family: var(--text-font);
-    }
-
-    .currentWeather img{
-        width: 6rem;
-        height: auto;
-        margin-top: -10px;
-    }
-
-    #weather h2{
-        font-family: var(--header-font);
-        color: var(--dark-text-stable);
-        text-align: center;
-    }
-
-    #futureForecast p{
-        /* Temperatures */
-        font-family: var(--text-font);
-        color: var(--dark-text-stable);
-        font-size: 90%;
-        font-weight: 400;
-        margin-top: 0;
-    }
-
-    #futureForecast span {
-        /* Date */
-        font-size: 85%;
-        font-weight: 600;
-        color: var(--dark-text-stable);
-    }
-
-    #futureForecast p
-
-    #weatherDesc {
-        color: var(--dark-text-stable);
-    }
+.forecast-item {
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 14px;
+}
+#city {
+  color: black;
+}
+.threedayforecast {
+  color: black;
+  margin-bottom: 15px;
+}
+.forecast img {
+  margin-top: 0;
+  border: none;
+}
 
 /* Button Section */
 

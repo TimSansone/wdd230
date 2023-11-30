@@ -5,9 +5,9 @@ const windSpeed = document.querySelector("#wind-speed");
 const windChill = document.querySelector("#windchill");
 const forecastCont = document.querySelector(".forecast-inf");
 
-const url1 = "https://api.openweathermap.org/data/2.5/weather?lat=28.32&lon=-81.22&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d";
+const url1 = "https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d";
 
-const url2 = "https://api.openweathermap.org/data/2.5/forecast?lat=28.32&lon=-81.22&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d";
+const url2 = "https://api.openweathermap.org/data/2.5/forecast?lat=28.54&lon=-81.38&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d";
 
 async function apiFetchW(url) {
     try {

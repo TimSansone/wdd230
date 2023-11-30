@@ -75,20 +75,29 @@
             <p>Join us for the grand opening of our brand new local theater, Friday at 2:00. <span>more info...</span></p>
         </section>
         
-<section class="card card2">
-            <h2>Orlando Weather</h2>
-            <div id="weather-container">
-                <img class="weather-icon" src="#" alt="#empty">
-                <div id="temp-container">
-                    <p>Temperature: <span id="temperature"></span>&deg;F</p>
-                    <p id="weather-info"></p>
-                </div> 
-            </div>
-            <p>Wind speed: <span id="wind-speed"></span> mph</p>
-            <p>Wind Chill: <span id="windchill"></span></p>
-            <h2>Forecast</h2>
-            <div class="forecast-inf">
-            </div>
+<section class="card">
+            <h3>Weather</h3>
+            <section class="weather">
+                <h4>Current Temperature</h4>
+                <figure>
+                    <img id="weather-icon" src="null" alt="weather-icon">
+                    <span id="current-temp"></span>
+                </figure>
+            </section>
+            <section class="weather">
+                <h4>Temperature Forcast</h4>
+                <span class="forecast">
+                </span>
+            </section>
+            <section class="weather">
+                <h4>Weather Data</h4>
+                <div id="weather-data">
+                    <section>
+                        <p>Wind speed: <span id="wind-speed"></span> mph</p>
+                        <p>Wind Chill: <span id="windchill"></span></p>
+                    </section>
+                </div>
+            </section>
         </section>
         
         <section id="news-section" class="home-section">
@@ -170,6 +179,7 @@
     <script src="./scripts/lazyload.js"></script>
     <script src="./scripts/darkmode.js"></script>
     <script src="./scripts/weather.js"></script>
+    <script src="./scripts/windchill.js"></script>
 
 </body>
 </html>

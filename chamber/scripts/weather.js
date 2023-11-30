@@ -4,7 +4,7 @@ const city = 'Quezon City'; // Replace with the desired city name
 
 // Function to get current weather data
 export async function getWeatherData() {
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d';
 
     try {
         const response = await fetch(weatherUrl);
@@ -46,7 +46,7 @@ export async function getWeatherData() {
 
 // Function to get weather forecast
 export async function getWeatherForecast() {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+    const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=28.54&lon=-81.38&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d';
 
     try {
         const response = await fetch(forecastUrl);

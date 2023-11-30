@@ -1,97 +1,76 @@
-const url = "https://api.openweathermap.org/data/2.5/weather?lat=28.54&lon=-81.38&units=imperial&appid=5a8231c5a5421807f22f48fd534cb44d";
-const weatherInfo = document.querySelector('#weather');
+// Define constants for API key and city outside the functions
+const apiKey = '5a8231c5a5421807f22f48fd534cb44d'; // Replace with your OpenWeatherMap API key
+const city = 'Quezon City'; // Replace with the desired city name
 
-async function getData(){
-    try{
-        const response = await fetch(url);
-        if(response.ok){
-            const data = await response.json();
-            console.log(data.list);
-            loadForecast(data);
-        }else{
-            throw Error(await response.text());
-        }
+// Function to get current weather data
+export async function getWeatherData() {
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
-    }catch(error){
-        console.log(error);
+    try {
+        const response = await fetch(weatherUrl);
+        const data = await response.json();
+
+        const temperature = data.main.temp;
+        const windSpeed = data.wind.speed;
+        const humidity = data.main.humidity;
+        const iconCode = data.weather[0].icon;
+
+        const windChillIndex = 5.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+
+        // Use const for element references
+        const descriptionElement = document.getElementById('description');
+        const cityElement = document.getElementById('city');
+        const temperatureElement = document.getElementById('temperature');
+        const windChillElement = document.getElementById('windChill');
+        const humidityElement = document.getElementById('humidity');
+        const weatherIconElement = document.getElementById('weather-icon');
+
+        descriptionElement.innerText = `Status: ${data.weather[0].description}`;
+        cityElement.textContent = city;
+        temperatureElement.textContent = `${temperature} °C`;
+        windChillElement.textContent = `Chill: ${windChillIndex.toFixed(2)} °C`;
+        humidityElement.textContent = `Report: ${humidity}%`;
+
+        const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+        weatherIconElement.src = iconUrl;
+    } catch (error) {
+        console.error('Error fetching weather data: ', error);
+        // Set N/A for all elements in case of an error
+        document.getElementById('city').textContent = 'City: N/A';
+        document.getElementById('temperature').textContent = 'Temperature: N/A';
+        document.getElementById('windChill').textContent = 'Wind Chill: N/A';
+        document.getElementById('humidity').textContent = 'Humidity: N/A';
+        document.getElementById('weather-icon').src = ''; // Clear the icon
     }
 }
-function loadForecast(data){ 
-   const weatherCard = document.createElement('article');
-   const weatherNow = document.createElement('div');
-   const dayIcon = document.createElement('img');
-   const dayNum = document.createElement('span');
-   const speed = document.createElement('p');
-   const chill = document.createElement('p');
-   dayNum.setAttribute('id', 'temp');
-   const dayDesc = document.createElement('span');
-   const weatherHead = document.createElement('h3');
-   const forecastHead = document.createElement('h3');
-   const iconSource = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
-   const todayDesc = data.list[0].weather[0].description;
-   
-   speed.textContent = `Wind Speed: ${data.list[0].wind.speed} mph`;
 
-   weatherHead.textContent = "Current Weather"
-   forecastHead.textContent = "3-Day Forecast"
-   dayIcon.setAttribute('src', iconSource);
-   dayIcon.setAttribute('alt', `Icon for ${todayDesc}`);
-   dayNum.innerHTML = `${Math.round(data.list[0].main.temp)}&deg;C`;
-   let indexOfTempType = dayNum.innerHTML.length - 1;
-   const windSpeed = data.list[0].wind.speed;   
-   let temperature = data.list[0].main.temp;
-   let windChill;
-   if (dayNum[indexOfTempType] == "C"){
-    temperature = ((9/5) * temperature) + 32;
-   }
-   if (temperature <= 50 && windSpeed >= 3){
-    
-    windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+// Function to get weather forecast
+export async function getWeatherForecast() {
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
 
-    windChill = Math.round(windChill);
-   }
-   else {
-    windChill = "N/A"
-   }
-   chill.textContent = `Wind Chill: ${windChill}°C`;
-   dayDesc.textContent = `  ${todayDesc}`;
-   weatherNow.appendChild(weatherHead)
-   weatherNow.appendChild(dayIcon);
-   weatherNow.appendChild(dayNum);
-   weatherNow.appendChild(dayDesc);
-   weatherCard.appendChild(weatherNow);
-   weatherCard.appendChild(speed);
-   weatherCard.appendChild(speed);
-   weatherCard.appendChild(chill);
-   weatherCard.appendChild(forecastHead);
+    try {
+        const response = await fetch(forecastUrl);
+        const data = await response.json();
 
-   let i = 8;
-   while( i < 25){
-    let forecastWeather = document.createElement('div');
-    let forecastDate = document.createElement('span');
-    let forecastIcon = document.createElement('img');
-    let forecastNum = document.createElement('span');
-    let forecastDesc = document.createElement('span');
+        const forecastList = data.list;
 
-    let dateStr = data.list[i].dt_txt;
-    dateStr = dateStr.substring(0,10);
-  
-     forecastDate.textContent = dateStr;
+        const day1 = forecastList[0];
+        const day2 = forecastList[8];
+        const day3 = forecastList[16];
 
-     let forecastIconImage = `https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
-     let fDesc = ` ${data.list[i].weather[0].description}`;
-     forecastIcon.setAttribute('src', forecastIconImage);
-     forecastIcon.setAttribute('alt', `icon for ${fDesc}`);
-     forecastNum.innerHTML = `${data.list[i].main.temp}&deg;C`
-     forecastDesc.textContent = fDesc;
-     
-     forecastWeather.appendChild(forecastDate);
-     forecastWeather.appendChild(forecastIcon);
-     forecastWeather.appendChild(forecastNum);
-     forecastWeather.appendChild(forecastDesc);
-     weatherCard.appendChild(forecastWeather);
-     i += 8;    
-   } 
-  weatherInfo.append(weatherCard);
+        // Use const for element references
+        const day1Element = document.getElementById('day1');
+        const day2Element = document.getElementById('day2');
+        const day3Element = document.getElementById('day3');
+
+        day1Element.textContent = `Tomorrow: ${day1.main.temp} °C`;
+        day2Element.textContent = `Next Day: ${day2.main.temp} °C`;
+        day3Element.textContent = `Other Day: ${day3.main.temp} °C`;
+    } catch (error) {
+        console.error('Error fetching weather forecast: ', error);
+    }
 }
-getData();
+
+// Call functions after defining them
+getWeatherData();
+getWeatherForecast();

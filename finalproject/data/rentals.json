@@ -1,106 +1,107 @@
 {
-    "rentals": [
+  "rentals": [
+    {
+      "name": "Honda Metro Scooter",
+
+      "maxPersons": "1",
+      "reservation": [
         {
-            "name": "~Honda Metropolitan",
-            "type": "Scooter",
-            "max-capacity": 1,
-            "max-speed": "49cc",
-            "details": "",
-            "reservation": {
-                "half-day": 20,
-                "full-day": 30
-            },
-            "walk-in": {
-                "half-day": 25,
-                "full-day": 35
-            }
-        },
-        {
-            "name": "~Honda Dio",
-            "type": "Scooter",
-            "max-capacity": 2,
-            "max-speed": "110cc",
-            "details": "",
-            "reservation": {
-                "half-day": 30,
-                "full-day": 40
-            },
-            "walk-in": {
-                "half-day": 35,
-                "full-day": 45
-            }
-        },
-        {
-            "name": "~Honda PCX150",
-            "type": "Scooter",
-            "max-capacity": 2,
-            "max-speed": "149cc",
-            "details": "",
-            "reservation": {
-                "half-day": 40,
-                "full-day": 50
-            },
-            "walk-in": {
-                "half-day": 45,
-                "full-day": 55
-            }
-        },
-        {
-            "name": "Honda Pioneer 1000",
-            "type": "ATV",
-            "max-capacity": 4,
-            "max-speed": "",
-            "details": "",
-            "reservation": {
-                "half-day": 50,
-                "full-day": 70
-            },
-            "walk-in": {
-                "half-day": 60,
-                "full-day": 80
-            }
-        },
-        {
-            "name": "2-Door Jeep Wrangler",
-            "type": "Jeep",
-            "max-capacity": 4,
-            "max-speed": "",
-            "details": "open air and manual",
-            "reservation": {
-                "half-day": 60,
-                "full-day": 85
-            },
-            "walk-in": {
-                "half-day": 70,
-                "full-day": 90
-            }
-        },
-        {
-            "name": "4-Door Jeep Wrangler",
-            "type": "Jeep",
-            "max-capacity": 5,
-            "max-speed": "",
-            "details": "manual with A/C",
-            "reservation": {
-                "half-day": 70,
-                "full-day": 100
-            },
-            "walk-in": {
-                "half-day": 85,
-                "full-day": 125
-            }
+          "halfDay": "20",
+          "fullDay": "30"
         }
-    ],
-    "agreement-info": [
-        "No one under 12 years of age are allowed to ride on the scooters.",
-        "Fuel charge not included. (Renters pay for fuel as needed, and are required to fill tank before returning)",
-        "If rentals are not returned on time renters will be charged for the next time slot."
-    ],
-    "other-info": [
-        "A valid drivers license is required in hand at time of rental.",
-        "Unlimited mileage.",
-        "Liability insurance is free of charge.",
-        "Free delivery to Cozumel hotel, Airbnb, or private residence for 2+ day rentals.",
-        "Rentals may be returned to either location."
-    ]
+      ],
+      "walkin": [
+        {
+          "halfDay": "25",
+          "fullDay": "35"
+        }
+      ],
+      "image": "hondaMetropolitan400w.jpg"
+    },
+    {
+      "name": "Honda Dio Scooter",
+      "maxPersons": "2",
+      "reservation": [
+        {
+          "halfDay": "30",
+          "fullDay": "40"
+        }
+      ],
+      "walkin": [
+        {
+          "halfDay": "35",
+          "fullDay": "45"
+        }
+      ],
+      "image": "HondaDio400w.jpg"
+    },
+    {
+      "name": "Honda PCX150 Scooter",
+      "maxPersons": "2",
+      "reservation": [
+        {
+          "halfDay": "40",
+          "fullDay": "50"
+        }
+      ],
+      "walkin": [
+        {
+          "halfDay": "45",
+          "fullDay": "55"
+        }
+      ],
+      "image": "hondaPCX400w.jpg"
+    },
+    {
+      "name": "Honda Pioneer ATV",
+      "maxPersons": "4",
+      "reservation": [
+        {
+          "halfDay": "50",
+          "fullDay": "70"
+        }
+      ],
+      "walkin": [
+        {
+          "halfDay": "60",
+          "fullDay": "80"
+        }
+      ],
+      "image": "hondaPioneer400w.jpg"
+    },
+    {
+      "name": "Jeep Wrangler - 4 door with a/c",
+      "maxPersons": "5",
+      "reservation": [
+        {
+          "halfDay": "70",
+          "fullDay": "100"
+        }
+      ],
+      "walkin": [
+        {
+          "halfDay": "85",
+          "fullDay": "125"
+        }
+      ],
+      "image": "jeepWrangler400w.jpg"
+    },
+    {
+      "name": "Jeep Wrangler - 2 door",
+      "maxPersons": "4",
+      "reservation": [
+        {
+          "halfDay": "60",
+          "fullDay": "85"
+        }
+      ],
+      "walkin": [
+        {
+          "halfDay": "70",
+          "fullDay": "90"
+        }
+      ],
+      "image": "JeepWrangler2doors400w.jpg"
+    }
+  ]
 }

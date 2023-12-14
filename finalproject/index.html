@@ -1,93 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>~Scoots Homepage</title>
-        <meta name="description" content="The homepage for ~Scoots. Information
-                for both location ins Cozumel, Mexico.">
-        <link rel="stylesheet" href="./css/normalize.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Ruluko&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/medium.css" media="(max-width: 650px)">
-        <link rel="stylesheet" href="./css/small.css" media="(max-width: 600px)">
-        <link rel="shortcut icon" href="./images/scoots-logo.png" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <h1>~Scoots</h1>
-            <nav class="out">
-                <ul>
-                    <li><span></span><span></span><span></span></li>
-                    <li><a class="at" href="./"><span>Home</span></a></li>
-                    <li><a class="  " href="./rentals.html"><span>Rentals</span></a></li>
-                    <li><a class="  " href="./reservations.html"><span>Reservations</span></a></li>
-                    <li><a class="  " href="./tours.html"><span>Tours</span></a></li>
-                    <li><a class="  " href="./contact.html"><span>Contact</span></a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="home">
-            <div class="alerts hide"></div>
-            <div class="hero">
-                <div>
-                    <p>Want to drive a Scooter, ATV, or Jeep around Cozumel, Mexico?</p>
-                    <a href="./reservations.html"><span>Make a Reservation</span></a>
-                </div>
-            </div>
-            <div class="grid">
-                <section>
-                    <h2>Basic Rental Info</h2>
-                    <section class="grid">
-                        <img src="./images/placeholder.png" alt="placeholder">
-                        <h3>Loading Data... <a href="#"><span>Rent Now</span></a></h3>
-                        <p>Max Capacity: - people</p>
-                        <p>Half day: $ - &nbsp; &nbsp; Full day: $ -</p>
-                    </section>
-                    <p>View more rental information on the <a href="./rentals.html"><span>Rentals page</span></a></p>
-                </section>
-                <hr>
-                <div class="weather">
-                    <section>
-                        <h3>Current Weather</h3>
-                        <img src="./images/placeholder.png" alt="temporary">
-                        <h4>Loading...</h4>
-                        <p>Loading...</p>
-                    </section>
-                </div>
-                <div class="forecast">
-                    <section>
-                        <img src="./images/placeholder.png" alt="temporary">
-                        <h3>Loading...</h3>
-                        <p>Loading...</p>
-                    </section>
-                    <section>
-                        <img src="./images/placeholder.png" alt="temporary">
-                        <h3>Loading...</h3>
-                        <p>Loading...</p>
-                    </section>
-                    <section>
-                        <img src="./images/placeholder.png" alt="temporary">
-                        <h3>Loading...</h3>
-                        <p>Loading...</p>
-                    </section>
-                    <p>Weather information from <a target="_blank" rel="noopener" href="https://openweathermap.org/"><span>Open Weather</span></a></p>
-                </div>
-                <div class="social-links">
-                    <a target="_blank" rel="noopener" href="https://www.facebook.com" class="facebook"><img src="./images/facebook-white.png" alt="Facebook link"> <span>Facebook</span></a>
-                    <a target="_blank" rel="noopener" href="https://www.instagram.com" class="instagram"><img src="./images/instagram-white.png" alt="Instagram link"> <span>Instagram</span></a>
-                    <a target="_blank" rel="noopener" href="https://www.linkedin.com" class="linked-in"><img src="./images/linked-in-white.png" alt="LinkedIn link"> <span>LinkedIn</span></a>
-                    <a target="_blank" rel="noopener" href="https://www.youtube.com" class="youtube"><img src="./images/youtube-white.png" alt="YouTube link"> <span>YouTube</span></a>
-                    <a target="_blank" rel="noopener" href="https://www.twitter.com" class="twitter"><img src="./images/twitter-white.png" alt="Twitter link"> <span>Twitter</span></a>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>&copy;<span id="year">2020</span> ~Scoots All Rights Reserved</p>
-            <a href="./terms-of-use.html"><span>Terms of Use</span></a>
-            <a href="./privacy-policy.html"><span>Privacy Policy</span></a>
-        </footer>
-        <script src="./js/index.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~Scoots | Home | Timothy Sansone</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="author" content="Timothy Sansone">
+  <meta name="description"
+    content="Final Project for WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+</head>
+<body>
+  <div class="hero">
+    <picture>
+      <source media="(max-width: 400px)" srcset="images/heroSmall.jpg">
+      <source media="(max-width: 600px)" srcset="images/heroMedium.jpg">
+      <source media="(max-width: 800px)" srcset="images/heroLarge.jpg">
+      <img src="images/heroLarge.jpg" alt="Tourists enjoying in the beach">
+    </picture>
+    <img class="logo" src="images/logo.png" alt="scoots logo">
+    <a class="btn" href="reservations.html">Make a Reservation</a>
+  </div>
+  <nav>
+    <ul class="navigation">
+      <li>
+        <a href="#" id="hamBtn"><i class="fas fa-bars"></i> Menu</a>
+      </li>
+      <li>
+        <a href="index.html" class="active">Home</a>
+      </li>
+      <li>
+        <a href="rentals.html">Rentals</a>
+      </li>
+      <li>
+        <a href="reservations.html">Reservations</a>
+      </li>
+      <li>
+        <a href="tours.html">Tours</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+  <section class="type-rentals">
+    <h2>Type of Rentals</h2>
+    <div>
+      <picture>
+        <source media="(max-width: 799px)" srcset="images/hondaPCX280w.jpg">
+        <source media="(min-width: 800px)" srcset="images/hondaPCX400w.jpg">
+        <img src="images/hondaPCX400w.jpg" alt="picture of Honda PCX150">
+      </picture>
+      <h3>Honda Motor Scooters</h3>
+      <ul class="list">
+        <li>Honda Metropolitan (49cc) - 1 person.</li>
+        <li>Honda Dio (110cc) - 2 person.</li>
+        <li>Honda PCX150 (149cc) - 2 person.</li>
+      </ul>
+    </div>
+    <div>
+      <picture>
+        <source media="(max-width: 799px)" srcset="images/hondaPioneer280w.jpg">
+        <source media="(min-width: 800px)" srcset="images/hondaPioneer400w.jpg">
+        <img src="images/hondaPioneer400w.jpg" alt="picture of Pioneer 1000">
+      </picture>
+      <h3>ATV Side-by-Side</h3>
+      <ul class="list">
+        <li>Honda Pioneer 1000.</li>
+      </ul>
+    </div>
+    <div>
+      <picture>
+        <source media="(max-width: 799px)" srcset="images/jeepWrangler280w.jpg">
+        <source media="(min-width: 800px)" srcset="images/jeepWrangler400w.jpg">
+        <img src="images/jeepWrangler400w.jpg" alt="picture of 4 door Jeep Wrangler">
+      </picture>
+      <h3>Jeep Rentals</h3>
+      <ul class="list">
+        <li>4-door Jeep Wrangler - manual with A/C - 5 people max.</li>
+        <li>2-door Jeep Wrangler - open air - manual - 4 people max.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="weather">
+    <h2>Weather in Cozumel</h2>
+    <div>
+      <img src=" " alt="Icon of the current weather" id="iconWeather">
+      <div>
+        <p>Temperature: <span id="temp"></span>°F</p>
+        <p>Description: <span id="curr"></span></p>
+        <p>Humidity: <span id="hum"></span>%</p>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th><span id="nameDay1"></span></th>
+        <th><span id="nameDay2"></span></th>
+        <th><span id="nameDay3"></span></th>
+        <th><span id="nameDay4"></span></th>
+        <th><span id="nameDay5"></span></th>
+      </tr>
+      <tr>
+        <td><img src=" " alt="image forecast" id="imgForecast2"></td>
+        <td><img src=" " alt="image forecast" id="imgForecast10"></td>
+        <td><img src=" " alt="image forecast" id="imgForecast18"></td>
+        <td><img src=" " alt="image forecast" id="imgForecast26"></td>
+        <td><img src=" " alt="image forecast" id="imgForecast34"></td>
+      </tr>
+      <tr>
+        <td><span id="tempForecast2"></span>°F</td>
+        <td><span id="tempForecast10"></span>°F</td>
+        <td><span id="tempForecast18"></span>°F</td>
+        <td><span id="tempForecast26"></span>°F</td>
+        <td><span id="tempForecast34"></span>°F</td>
+      </tr>
+    </table>
+  </section>
+  <section class="contact">
+    <h2>Contact</h2>
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.8590777853124!2d-86.95296768580714!3d20.51200241059551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e59cf3a0ece15%3A0x9216e3c2b55e5526!2sPlaya%20del%20Carmen-Cozumel%20Ferry%20Dock!5e0!3m2!1sen!2spe!4v1594792384520!5m2!1sen!2spe"
+        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+      <address>
+        <ul>
+          <li>
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <a href="#">Phone: 999-999-999</a>
+          </li>
+          <li>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <a href="#">Email: contact@cozumelscooters.com</a>
+          </li>
+          <li>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <a href="#">Adress: Playa del Carmen-Cozumel Ferry dock</a>
+          </li>
+          <li>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <a href="#">Adress: Terminal Puerta Maya</a>
+          </li>
+        </ul>
+      </address>
+      <ul class="social-list">
+        <li>
+          <a href="#" title="Facebook">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Instagram">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Twitter">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <p><i class="far fa-copyright"></i> Timothy Sansone 2023</p>
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="rentals.html">Rentals</a>
+      </li>
+      <li>
+        <a href="reservations.html">Reservations</a>
+      </li>
+      <li>
+        <a href="tours.html">Tours</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="wireframes.html">Wireframes</a>
+      </li>
+    </ul>
+    <p>Last Updated: <span id="updatedDate"></span></p>
+  </footer>
+  <script src="js/scripts.js"></script>
+  <script src="js/home.js"></script>
+  <script src="https://kit.fontawesome.com/2bdc0b59cd.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Roboto:300,400,700']
+      }
+    });
+  </script>
+  
+</body>
 </html>

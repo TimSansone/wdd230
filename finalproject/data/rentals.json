@@ -16,7 +16,7 @@
           "fullDay": "35"
         }
       ],
-      "image": "hondaMetropolitan400w.jpg"
+      "image": "hondaMetropolitan400w.webp"
     },
     {
       "name": "Honda Dio Scooter",
@@ -33,7 +33,7 @@
           "fullDay": "45"
         }
       ],
-      "image": "HondaDio400w.jpg"
+      "image": "HondaDio400w.webp"
     },
     {
       "name": "Honda PCX150 Scooter",
@@ -50,7 +50,7 @@
           "fullDay": "55"
         }
       ],
-      "image": "hondaPCX400w.jpg"
+      "image": "hondaPCX400w.webp"
     },
     {
       "name": "Honda Pioneer ATV",
@@ -67,7 +67,7 @@
           "fullDay": "80"
         }
       ],
-      "image": "hondaPioneer400w.jpg"
+      "image": "hondaPioneer400w.webp"
     },
     {
       "name": "Jeep Wrangler - 4 door with a/c",
@@ -84,7 +84,7 @@
           "fullDay": "125"
         }
       ],
-      "image": "jeepWrangler400w.jpg"
+      "image": "jeepWrangler400w.webp"
     },
     {
       "name": "Jeep Wrangler - 2 door",
@@ -101,7 +101,7 @@
           "fullDay": "90"
         }
       ],
-      "image": "JeepWrangler2doors400w.jpg"
+      "image": "JeepWrangler2doors400w.webp"
     }
   ]
 }
